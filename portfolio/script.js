@@ -1,5 +1,26 @@
 const form = document.getElementById("contactForm");
 const statusText = document.getElementById("formStatus");
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".sidebar a");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop - 150;
+    if (scrollY >= sectionTop) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach((link) => {
+    link.classList.remove("active");
+    if (link.dataset.section === current) {
+      link.classList.add("active");
+    }
+  });
+});
+
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();

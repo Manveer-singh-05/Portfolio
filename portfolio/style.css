@@ -261,4 +261,48 @@ body {
   font-size: 0.85rem;
   margin-top: 5px;
 }
+/* SIDEBAR */
+.sidebar {
+  position: fixed;
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(14px);
+  border-radius: 30px;
+  padding: 15px 10px;
+  box-shadow: 0 0 30px rgba(56, 189, 248, 0.2);
+  z-index: 100;
+}
+
+.sidebar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.sidebar a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.sidebar a:hover {
+  color: #38bdf8;
+  box-shadow: 0 0 15px #38bdf8;
+}
+
+.sidebar a.active {
+  color: #020617;
+  background: #38bdf8;
+  box-shadow: 0 0 20px #38bdf8;
+}
 
