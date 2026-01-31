@@ -1,9 +1,10 @@
-import Sidebar from "../components/Sidebar";
-import Hero from "../components/Hero";
-import Skills from "../components/Skills";
+import Sidebar from "./components/Sidebar";
+import Hero from "./components/Hero";
+import Skills from "./components/Skills";
 import Projects from "./components/Projects";
-import Languages from "../components/Languages";
-import Contact from "../components/Contact";
+import Languages from "./components/Languages";
+import Contact from "./components/Contact";
+import SectionWrapper from "./components/SectionWrapper";
 
 function App() {
   return (
@@ -11,23 +12,33 @@ function App() {
       <Sidebar />
 
       <section id="home" className="card">
-        <Hero />
+        <SectionWrapper>
+          <Hero />
+        </SectionWrapper>
       </section>
 
       <section id="skills" className="card">
-        <Skills />
+        <SectionWrapper>
+          <Skills />
+        </SectionWrapper>
       </section>
 
       <section id="projects" className="card">
-        <Projects />
+        <SectionWrapper>
+          <Projects />
+        </SectionWrapper>
       </section>
 
       <section id="languages" className="card">
-        <Languages />
+        <SectionWrapper>
+          <Languages />
+        </SectionWrapper>
       </section>
 
       <section id="contact" className="card">
-        <Contact />
+        <SectionWrapper>
+          <Contact />
+        </SectionWrapper>
       </section>
     </>
   );
