@@ -305,4 +305,18 @@ body {
   background: #38bdf8;
   box-shadow: 0 0 20px #38bdf8;
 }
+html {
+  scroll-behavior: smooth;
+}
+/* SCROLL ANIMATION */
+section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 

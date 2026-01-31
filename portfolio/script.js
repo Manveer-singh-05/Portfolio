@@ -2,6 +2,22 @@ const form = document.getElementById("contactForm");
 const statusText = document.getElementById("formStatus");
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".sidebar a");
+const revealSections = document.querySelectorAll("section");
+
+const revealOnScroll = () => {
+  revealSections.forEach(section => {
+    const sectionTop = section.getBoundingClientRect().top;
+    const triggerPoint = window.innerHeight - 100;
+
+    if (sectionTop < triggerPoint) {
+      section.classList.add("show");
+    }
+  });
+};
+
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll(); // run once on load
+
 
 window.addEventListener("scroll", () => {
   let current = "";
