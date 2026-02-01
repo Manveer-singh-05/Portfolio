@@ -11,15 +11,16 @@ function App() {
   return (
     <>
       <Sidebar />
-
+  {/* HERO — standalone */}
+      <Hero />
       <main className="dashboard">
 
         {/* ROW 1 */}
-        <section id="home" className="card span-2">
+        {/* <section id="home" className="card span-2">
           <SectionWrapper>
             <Hero />
           </SectionWrapper>
-        </section>
+        </section> */}
 
         <section id="languages" className="card">
           <SectionWrapper>
