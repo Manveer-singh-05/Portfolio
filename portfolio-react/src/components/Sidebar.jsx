@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { motion as m} from "framer-motion";
+import { motion as m } from "framer-motion";
 
 const sections = [
   { id: "home", icon: "fa-house" },
@@ -30,20 +30,23 @@ const Sidebar = () => {
 
     window.addEventListener("scroll", handleScroll);
     handleScroll();
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <nav className="sidebar">
-      {/* LOGO / AVATAR */}
-      <div className="sidebar-logo">
-        {/* Option A: Initials */}
-        <span>M</span>
+      {/* LOGO */}
+      <m.div
+        className="sidebar-logo"
+        initial={{ scale: 0.8, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 0.4, ease: "easeOut" }}
+      >
+        M
+      </m.div>
 
-        {/* Option B: Image (uncomment if you want) */}
-        {/* <img src="/profile.png" alt="Manveer" /> */}
-      </div>
-
+      {/* NAV ICONS */}
       <ul>
         {sections.map(({ id, icon }) => (
           <li key={id}>
