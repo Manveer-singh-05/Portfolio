@@ -9,28 +9,37 @@ const languagesData = [
 const Languages = () => {
   return (
     <motion.div
-      className="languages"
-      initial={{ opacity: 0, y: 40 }}
+      initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
       viewport={{ once: true }}
+      className="w-full"
     >
-      <h2 className="section-title">Languages</h2>
-      <p className="section-desc">
+      {/* Heading */}
+      <h2 className="text-center text-2xl font-semibold mb-2">
+        Languages
+      </h2>
+
+      <p className="text-center text-sm text-slate-400 mb-10">
         Languages I am comfortable communicating in.
       </p>
 
-      <div className="language-list">
+      {/* Language list */}
+      <div className="space-y-6">
         {languagesData.map((lang, index) => (
-          <div className="language" key={index}>
-            <div className="lang-header">
-              <span>{lang.name}</span>
-              <span className="percent">{lang.level}%</span>
+          <div key={index}>
+            {/* Label */}
+            <div className="mb-2 flex justify-between text-sm">
+              <span className="text-slate-200">{lang.name}</span>
+              <span className="text-sky-400">{lang.level}%</span>
             </div>
 
-            <div className="progress">
+            {/* Progress bar */}
+            <div className="h-2 w-full rounded-full bg-white/10 overflow-hidden">
               <motion.div
-                className="progress-bar"
+                className="h-full rounded-full
+                           bg-gradient-to-r from-sky-400 to-indigo-500
+                           shadow-[0_0_15px_rgba(56,189,248,0.7)]"
                 initial={{ width: 0 }}
                 whileInView={{ width: `${lang.level}%` }}
                 transition={{ duration: 0.8, ease: "easeOut" }}

@@ -5,7 +5,7 @@ import Projects from "./components/Projects";
 import Languages from "./components/Languages";
 import Contact from "./components/Contact";
 import Education from "./components/Education";
-import SectionWrapper from "./components/SectionWrapper";
+
 
 function App() {
   return (
