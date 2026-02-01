@@ -1,16 +1,14 @@
 @import "tailwindcss";
 
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-
 /* BASE */
 html {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
 }
 
 body {
@@ -20,28 +18,28 @@ body {
   overflow-x: hidden;
 }
 
-/* BACKGROUND GLOW BLOBS */
+/* AMBIENT BACKGROUND GLOW (SUBTLE) */
 body::before,
 body::after {
   content: "";
   position: fixed;
-  width: 400px;
-  height: 400px;
+  width: 420px;
+  height: 420px;
   background: radial-gradient(
     circle,
-    rgba(56, 189, 248, 0.35),
+    rgba(56, 189, 248, 0.18),
     transparent 70%
   );
-  filter: blur(120px);
+  filter: blur(160px);
   z-index: -1;
 }
 
 body::before {
-  top: -100px;
-  left: -100px;
+  top: -120px;
+  left: -120px;
 }
 
 body::after {
-  bottom: -100px;
-  right: -100px;
+  bottom: -120px;
+  right: -120px;
 }
