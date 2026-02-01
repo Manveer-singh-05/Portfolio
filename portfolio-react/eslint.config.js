@@ -23,7 +23,13 @@ export default defineConfig([
       },
     },
     rules: {
-      'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+      // Allow Framer Motion JSX usage like <motion.a> or <m.a>
+      'no-unused-vars': [
+        'error',
+        {
+          varsIgnorePattern: '^(motion|m|[A-Z_])',
+        },
+      ],
     },
   },
 ])

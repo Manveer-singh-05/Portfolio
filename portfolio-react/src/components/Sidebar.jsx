@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion as m} from "framer-motion";
 
 const sections = [
   { id: "home", icon: "fa-house" },
   { id: "skills", icon: "fa-code" },
   { id: "projects", icon: "fa-briefcase" },
   { id: "languages", icon: "fa-globe" },
+  { id: "education", icon: "fa-graduation-cap" },
   { id: "contact", icon: "fa-envelope" },
 ];
 
@@ -14,45 +15,46 @@ const Sidebar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      let current = active;
+      const middle = window.innerHeight / 2;
 
       sections.forEach(({ id }) => {
         const section = document.getElementById(id);
         if (!section) return;
 
         const rect = section.getBoundingClientRect();
-        const middle = window.innerHeight / 2;
-
         if (rect.top <= middle && rect.bottom >= middle) {
-          current = id;
+          setActive(id);
         }
       });
-
-      if (current !== active) {
-        setActive(current);
-      }
     };
 
     window.addEventListener("scroll", handleScroll);
     handleScroll();
-
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [active]);
+  }, []);
 
   return (
     <nav className="sidebar">
+      {/* LOGO / AVATAR */}
+      <div className="sidebar-logo">
+        {/* Option A: Initials */}
+        <span>M</span>
+
+        {/* Option B: Image (uncomment if you want) */}
+        {/* <img src="/profile.png" alt="Manveer" /> */}
+      </div>
+
       <ul>
         {sections.map(({ id, icon }) => (
           <li key={id}>
-            <motion.a
+            <m.a
               href={`#${id}`}
               className={active === id ? "active" : ""}
               whileHover={{ scale: 1.15 }}
               whileTap={{ scale: 0.95 }}
-              transition={{ type: "spring", stiffness: 300 }}
             >
               <i className={`fas ${icon}`}></i>
-            </motion.a>
+            </m.a>
           </li>
         ))}
       </ul>
