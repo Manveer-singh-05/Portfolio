@@ -33,24 +33,38 @@ const Contact = () => {
 
   return (
     <motion.div
-      className="contact"
-      initial={{ opacity: 0, y: 40 }}
+      initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
       viewport={{ once: true }}
+      className="w-full"
     >
-      <h2 className="section-title">Contact Me</h2>
-      <p className="section-desc">
+      {/* Heading */}
+      <h2 className="text-center text-2xl font-semibold mb-2">
+        Contact Me
+      </h2>
+
+      <p className="text-center text-sm text-slate-400 mb-10">
         Feel free to reach out for opportunities or collaboration.
       </p>
 
-      <form className="contact-form" onSubmit={handleSubmit}>
+      {/* Form */}
+      <form
+        onSubmit={handleSubmit}
+        className="mx-auto max-w-md space-y-5"
+      >
         <input
           type="text"
           name="name"
           placeholder="Your Name"
           value={formData.name}
           onChange={handleChange}
+          className="w-full rounded-xl bg-white/5 backdrop-blur-xl 
+                     border border-white/10 
+                     px-4 py-3 text-sm text-slate-200 
+                     placeholder-slate-400 
+                     outline-none
+                     focus:border-sky-400"
         />
 
         <input
@@ -59,6 +73,12 @@ const Contact = () => {
           placeholder="Your Email"
           value={formData.email}
           onChange={handleChange}
+          className="w-full rounded-xl bg-white/5 backdrop-blur-xl 
+                     border border-white/10 
+                     px-4 py-3 text-sm text-slate-200 
+                     placeholder-slate-400 
+                     outline-none
+                     focus:border-sky-400"
         />
 
         <textarea
@@ -67,23 +87,33 @@ const Contact = () => {
           placeholder="Your Message"
           value={formData.message}
           onChange={handleChange}
-        ></textarea>
+          className="w-full rounded-xl bg-white/5 backdrop-blur-xl 
+                     border border-white/10 
+                     px-4 py-3 text-sm text-slate-200 
+                     placeholder-slate-400 
+                     outline-none
+                     focus:border-sky-400 resize-none"
+        />
 
         <motion.button
           type="submit"
-          className="btn primary"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
+          className="w-full rounded-full bg-sky-400 py-3 
+                     text-sm font-medium text-slate-950
+                     transition
+                     hover:shadow-[0_0_30px_rgba(56,189,248,0.9)]"
         >
           Send Message
         </motion.button>
 
         {status && (
           <p
-            className="form-status"
-            style={{
-              color: status.includes("successfully") ? "#38bdf8" : "#f87171",
-            }}
+            className={`text-center text-xs ${
+              status.includes("successfully")
+                ? "text-sky-400"
+                : "text-red-400"
+            }`}
           >
             {status}
           </p>
