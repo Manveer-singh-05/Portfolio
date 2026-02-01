@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import profile from "../assets/manveer.jpeg";
 
 const roles = [
-  "Software Engineering Student",
-  "Frontend Developer",
-  "Problem Solver",
+  "Software Engineering Student ",
+  "Frontend Developer ",
+  "Problem Solver ",
 ];
 
 const Hero = () => {
@@ -37,52 +37,41 @@ const Hero = () => {
   }, [subIndex, index, deleting]);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-6">
+    <section className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
 
-      {/* CENTER RADIAL GLOW */}
+      {/* HORIZONTAL HERO GLOW (KEY DIFFERENCE) */}
       <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-        <div className="h-[520px] w-[520px] rounded-full 
-                        bg-sky-400/30 blur-[180px]" />
+        <div
+          className="w-[1200px] h-[420px] rounded-full 
+                     bg-sky-400/25 blur-[220px]"
+        />
       </div>
 
-      {/* HERO CARD */}
-      <div className="relative w-full max-w-5xl rounded-3xl 
-                      bg-white/[0.06] backdrop-blur-2xl 
-                      border border-transparent
-                      px-10 py-20 text-center
-                      shadow-[0_0_160px_rgba(56,189,248,0.35)]">
+      {/* CONTENT (NO CARD, NO BOX, NO MASK) */}
+      <div className="relative z-10 text-center">
 
         {/* AVATAR */}
-        <div className="absolute left-1/2 -top-20 -translate-x-1/2">
-          <div className="relative h-36 w-36 rounded-full">
-
-            {/* avatar glow */}
-            <div className="absolute inset-0 rounded-full 
-                            bg-sky-400/40 blur-[40px]" />
-
-            <img
-              src={profile}
-              alt="Manveer Singh"
-              className="relative h-full w-full rounded-full object-cover
-                         shadow-[0_0_60px_rgba(56,189,248,0.9)]"
-            />
-          </div>
+        <div className="relative mx-auto mb-8 h-36 w-36 rounded-full">
+          <div className="absolute inset-0 rounded-full bg-sky-400/40 blur-[55px]" />
+          <img
+            src={profile}
+            alt="Manveer Singh"
+            className="relative h-full w-full rounded-full object-cover
+                       shadow-[0_0_80px_rgba(56,189,248,1)]"
+          />
         </div>
-
-        {/* SPACER */}
-        <div className="h-14" />
 
         {/* TITLE */}
         <h1 className="text-4xl md:text-5xl font-semibold tracking-wide mb-3">
           Hi, I&apos;m{" "}
           <span className="bg-gradient-to-r from-sky-400 via-cyan-300 to-indigo-400
-                           bg-clip-text text-transparent drop-shadow">
+                           bg-clip-text text-transparent">
             Manveer Singh
           </span>
         </h1>
 
-        {/* DYNAMIC SUBTITLE */}
-        <h3 className="text-base md:text-lg text-slate-100 mb-6 h-6">
+        {/* DYNAMIC ROLE */}
+        <h3 className="text-base md:text-lg text-slate-200 mb-6 h-6">
           I&apos;m a{" "}
           <span className="text-sky-400 font-medium">
             {text}
@@ -91,8 +80,8 @@ const Hero = () => {
         </h3>
 
         {/* DESCRIPTION */}
-        <p className="mx-auto max-w-2xl text-sm md:text-base 
-                      text-slate-300 leading-relaxed mb-12">
+        <p className="mx-auto max-w-2xl text-sm md:text-base
+                      text-slate-300 leading-relaxed mb-10">
           I build clean, responsive web applications and enjoy solving
           real-world problems using modern technologies.
         </p>
@@ -103,11 +92,9 @@ const Hero = () => {
             href="#projects"
             className="rounded-full bg-sky-400 px-10 py-3.5
                        text-sm font-medium text-slate-950
-                       shadow-[inset_0_0_10px_rgba(255,255,255,0.4),
-                               0_0_40px_rgba(56,189,248,1)]
-                       hover:shadow-[0_0_70px_rgba(56,189,248,1)]
-                       hover:-translate-y-[1px]
-                       transition"
+                       shadow-[0_0_45px_rgba(56,189,248,1)]
+                       hover:shadow-[0_0_80px_rgba(56,189,248,1)]
+                       transition-all"
           >
             View My Work
           </a>
@@ -118,8 +105,7 @@ const Hero = () => {
             className="rounded-full bg-white/5 px-10 py-3.5
                        text-sm font-medium text-sky-300
                        hover:bg-sky-400 hover:text-slate-950
-                       hover:-translate-y-[1px]
-                       transition"
+                       transition-all"
           >
             Download CV
           </a>

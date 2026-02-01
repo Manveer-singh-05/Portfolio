@@ -18,14 +18,14 @@ function App() {
       {/* Main content */}
       <main className="px-6 md:px-16 py-20 space-y-24">
 
-        <section id="languages" className="max-w-4xl mx-auto">
-          <Languages />
-        </section>
 
         <section id="skills" className="max-w-4xl mx-auto">
           <Skills />
         </section>
 
+        <section id="languages" className="max-w-4xl mx-auto">
+          <Languages />
+        </section>
         <section id="education" className="max-w-4xl mx-auto">
           <Education />
         </section>
