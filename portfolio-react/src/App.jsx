@@ -9,15 +9,17 @@ import Education from "./components/Education";
 function App() {
   return (
     <>
-      {/* Sidebar */}
-      <Sidebar />
+    
 
-      {/* Hero (standalone, full screen) */}
-      <Hero />
+    
 
-      {/* Main content */}
       <main className="px-6 md:px-16 py-20 space-y-24">
 
+      <Sidebar />
+    <section id="hero" className="max-w-4xl mx-auto">
+      <Hero />
+
+    </section>
 
         <section id="skills" className="max-w-4xl mx-auto">
           <Skills />
