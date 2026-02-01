@@ -6,53 +6,36 @@ import Languages from "./components/Languages";
 import Contact from "./components/Contact";
 import Education from "./components/Education";
 
-
 function App() {
   return (
     <>
+      {/* Sidebar */}
       <Sidebar />
-  {/* HERO — standalone */}
+
+      {/* Hero (standalone, full screen) */}
       <Hero />
-      <main className="dashboard">
 
-        {/* ROW 1 */}
-        {/* <section id="home" className="card span-2">
-          <SectionWrapper>
-            <Hero />
-          </SectionWrapper>
-        </section> */}
+      {/* Main content */}
+      <main className="px-6 md:px-16 py-20 space-y-24">
 
-        <section id="languages" className="card">
-          <SectionWrapper>
-            <Languages />
-          </SectionWrapper>
+        <section id="languages" className="max-w-4xl mx-auto">
+          <Languages />
         </section>
 
-        {/* ROW 2 */}
-        <section id="skills" className="card">
-          <SectionWrapper>
-            <Skills />
-          </SectionWrapper>
+        <section id="skills" className="max-w-4xl mx-auto">
+          <Skills />
         </section>
 
-        <section id="education" className="card">
-          <SectionWrapper>
-            <Education />
-          </SectionWrapper>
+        <section id="education" className="max-w-4xl mx-auto">
+          <Education />
         </section>
 
-        {/* ROW 3 */}
-        <section id="projects" className="card span-2">
-          <SectionWrapper>
-            <Projects />
-          </SectionWrapper>
+        <section id="projects" className="max-w-6xl mx-auto">
+          <Projects />
         </section>
 
-        {/* ROW 4 */}
-        <section id="contact" className="card span-2">
-          <SectionWrapper>
-            <Contact />
-          </SectionWrapper>
+        <section id="contact" className="max-w-4xl mx-auto">
+          <Contact />
         </section>
 
       </main>

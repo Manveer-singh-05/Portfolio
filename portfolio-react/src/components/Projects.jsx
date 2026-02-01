@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+
 const projectsData = [
   {
     title: "Basic Calendar Generator",
@@ -18,30 +19,46 @@ const projectsData = [
     title: "Portfolio Website",
     description:
       "A modern dark-glass portfolio to showcase skills and projects.",
-    tech: "React • CSS • JavaScript",
+    tech: "React • Tailwind • JavaScript",
     link: "#",
   },
 ];
 
 const Projects = () => {
   return (
-    <div className="projects">
-      <h2 className="section-title">My Projects</h2>
-      <p className="section-desc">
+    <div className="w-full">
+      {/* Heading */}
+      <h2 className="text-center text-2xl font-semibold mb-2">
+        My Projects
+      </h2>
+
+      <p className="text-center text-sm text-slate-400 mb-12">
         Some of the projects I’ve built to apply my skills.
       </p>
 
-      <div className="projects-grid">
+      {/* Projects grid */}
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {projectsData.map((project, index) => (
           <motion.div
             key={index}
-            className="project-card"
-            whileHover={{ y: -8, scale: 1.02 }}
+            whileHover={{ y: -8, scale: 1.03 }}
             transition={{ type: "spring", stiffness: 200 }}
+            className="rounded-2xl bg-white/5 backdrop-blur-xl 
+                       border border-white/10 
+                       px-6 py-5
+                       shadow-[0_0_35px_rgba(56,189,248,0.15)]"
           >
-            <h3>{project.title}</h3>
-            <p>{project.description}</p>
-            <span>{project.tech}</span>
+            <h3 className="text-base font-semibold text-slate-200 mb-2">
+              {project.title}
+            </h3>
+
+            <p className="text-sm text-slate-400 mb-4 leading-relaxed">
+              {project.description}
+            </p>
+
+            <span className="inline-block text-xs font-medium text-sky-400">
+              {project.tech}
+            </span>
           </motion.div>
         ))}
       </div>
