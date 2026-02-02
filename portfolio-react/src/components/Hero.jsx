@@ -47,7 +47,7 @@ const Hero = () => {
       </div>
 
       {/* CONTENT (NO CARD, NO BOX, NO MASK) */}
-      <div className="relative z-10 text-center">
+      <div className="relative z-10 text-center -translate-y-14">
         {/* AVATAR */}
         <div className="relative mx-auto mb-8 h-[180px] w-[180px] rounded-full">
           <div className="absolute inset-0 rounded-full  blur-[55px]" />

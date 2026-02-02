@@ -58,7 +58,7 @@ const Sidebar = () => {
              shadow-[0_0_60px_rgba(56,189,248,0.25)]"
   style={{
     transform: "translateY(-50%)",
-    animation: "floatSlow 6s ease-in-out infinite",
+    animation: "floatSlow 4s ease-in-out infinite",
   }}
 >
 

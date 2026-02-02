@@ -1,12 +1,20 @@
 import { useEffect, useRef } from "react";
+import { SiCplusplus , SiMongodb } from "react-icons/si";
 import {
   FaReact,
   FaHtml5,
   FaCss3Alt,
   FaJs,
   FaDatabase,
+  FaJava,
+  FaPython,
+  FaCuttlefish,
+
 } from "react-icons/fa";
 
+/* =======================
+   SKILLS DATA (RIGHT SIDE)
+======================= */
 const skillsData = [
   { name: "C++ / DSA", level: 85 },
   { name: "HTML, CSS, JavaScript", level: 80 },
@@ -15,12 +23,26 @@ const skillsData = [
   { name: "OS & Computer Networks", level: 70 },
 ];
 
-const orbitIcons = [
+/* =======================
+   INNER ORBIT ICONS
+======================= */
+const orbitIconsInner = [
   { Icon: FaReact, color: "text-cyan-400", angle: 0 },
   { Icon: FaHtml5, color: "text-orange-400", angle: 72 },
   { Icon: FaCss3Alt, color: "text-blue-400", angle: 144 },
   { Icon: FaJs, color: "text-yellow-300", angle: 216 },
   { Icon: FaDatabase, color: "text-indigo-400", angle: 288 },
+];
+
+/* =======================
+   OUTER ORBIT ICONS
+======================= */
+const orbitIconsOuter = [
+  { Icon: FaJava, color: "text-cyan-400", angle: 0 },
+  { Icon: FaPython, color: "text-orange-400", angle: 60 },
+  { Icon: FaCuttlefish, color: "text-blue-400", angle: 120 },
+  { Icon: SiCplusplus, color: "text-yellow-300", angle: 180 },
+  { Icon: SiMongodb, color: "text-indigo-400", angle: 240 },
 ];
 
 const Skills = () => {
@@ -37,27 +59,34 @@ const Skills = () => {
 
       {/* BACKGROUND GLOW */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        {/* bg-sky-400/20  i applied this in my below div*/}
-        <div className="h-[800px] w-[800px] rounded-full  blur-[300px]" />
+        <div className="h-[800px] w-[800px] rounded-full blur-[300px]" />
       </div>
 
       <div className="relative w-full max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-28 items-center z-10">
 
-        {/* LEFT – ORBIT SYSTEM */}
+        {/* =======================
+            LEFT – ORBIT SYSTEM
+        ======================= */}
         <div className="relative flex items-center justify-center">
 
           {/* CORE */}
-          <div className="absolute h-28 w-28 rounded-full 
-                          bg-gradient-to-r from-sky-400 to-indigo-400
-                          shadow-[0_0_80px_rgba(56,189,248,1)]" />
+          <div
+            className="absolute h-28 w-28 rounded-full 
+                       bg-gradient-to-r from-sky-400 to-indigo-400
+                       shadow-[0_0_80px_rgba(56,189,248,1)]"
+          />
 
-          {/* ORBIT RING */}
+          {/* INNER ORBIT RING */}
           <div className="absolute h-72 w-72 rounded-full border border-sky-400/15" />
 
-          {/* ROTATING ORBIT */}
-          <div className="absolute h-72 w-72 animate-orbit">
+          {/* OUTER ORBIT RING */}
+          <div className="absolute h-[420px] w-[420px] rounded-full border border-sky-400/10" />
 
-            {orbitIcons.map(({ Icon, color, angle }, index) => (
+          {/* =======================
+              INNER ROTATING ORBIT
+          ======================= */}
+          <div className="absolute h-72 w-72 animate-orbit">
+            {orbitIconsInner.map(({ Icon, color, angle }, index) => (
               <div
                 key={index}
                 className="absolute top-1/2 left-1/2"
@@ -67,19 +96,45 @@ const Skills = () => {
               >
                 <div
                   className="p-3 rounded-full bg-white/5 backdrop-blur
-                             shadow-[0_0_25px_rgba(56,189,248,0.8)]
-                             hover:shadow-[0_0_55px_rgba(56,189,248,1)]
+                             shadow-[0_0_20px_rgba(56,189,248,0.8)]
+                             hover:shadow-[0_0_45px_rgba(56,189,248,0.9)]
                              hover:scale-125 transition-all duration-300"
                 >
                   <Icon className={`text-3xl ${color}`} />
                 </div>
               </div>
             ))}
-
           </div>
+
+          {/* =======================
+              OUTER ROTATING ORBIT
+          ======================= */}
+          <div className="absolute h-[420px] w-[420px] orbit-slow">
+            {orbitIconsOuter.map(({ Icon, color, angle }, index) => (
+              <div
+                key={index}
+                className="absolute top-1/2 left-1/2"
+                style={{
+                  transform: `rotate(${angle}deg) translateY(-210px) rotate(-${angle}deg)`,
+                }}
+              >
+                <div
+                  className="p-3 rounded-full bg-white/5 backdrop-blur
+                             shadow-[0_0_20px_rgba(56,189,248,0.6)]
+                             hover:shadow-[0_0_45px_rgba(56,189,248,0.9)]
+                             hover:scale-125 transition-all duration-300"
+                >
+                  <Icon className={`text-3xl ${color}`} />
+                </div>
+              </div>
+            ))}
+          </div>
+
         </div>
 
-        {/* RIGHT – SKILLS */}
+        {/* =======================
+            RIGHT – SKILLS BARS
+        ======================= */}
         <div>
           <h2 className="text-3xl md:text-4xl font-semibold mb-3">
             My{" "}
