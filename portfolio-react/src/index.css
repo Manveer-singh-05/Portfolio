@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* BASE */
+
 html {
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
@@ -18,7 +18,7 @@ body {
   overflow-x: hidden;
 }
 
-/* AMBIENT BACKGROUND GLOW (SUBTLE) */
+
 body::before,
 body::after {
   content: "";
@@ -78,3 +78,15 @@ body::after {
 .orbit-fast {
   animation: orbit 12s linear infinite;
 }
+@keyframes floatSlow {
+  0% {
+    transform: translateY(-50%) translateY(0);
+  }
+  50% {
+    transform: translateY(-50%) translateY(-10px);
+  }
+  100% {
+    transform: translateY(-50%) translateY(0);
+  }
+}
+

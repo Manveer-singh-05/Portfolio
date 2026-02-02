@@ -38,33 +38,42 @@ const Sidebar = () => {
 
     window.addEventListener("scroll", handleScroll);
     handleScroll();
-
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
+    // <nav
+    //   className="fixed left-6 top-1/2 z-50 hidden md:flex
+    //              -translate-y-1/2 flex-col items-center gap-6
+    //              rounded-[30px] bg-white/5 backdrop-blur-2xl
+    //              px-3 py-5
+    //              shadow-[0_0_60px_rgba(56,189,248,0.25)]"
+    //   style={{ animation: "floatSlow 6s ease-in-out infinite" }}
+    // >
     <nav
-      className="fixed left-6 top-1/2 z-50 hidden -translate-y-1/2
-                 md:flex flex-col items-center
-                 rounded-[28px] bg-white/5 backdrop-blur-2xl
-                 px-3 py-4
-                 shadow-[0_0_60px_rgba(56,189,248,0.25)]"
-    >
+  className="fixed left-6 top-1/2 z-50 hidden md:flex
+             flex-col items-center gap-6
+             rounded-[30px] bg-white/5 backdrop-blur-2xl
+             px-3 py-5
+             shadow-[0_0_60px_rgba(56,189,248,0.25)]"
+  style={{
+    transform: "translateY(-50%)",
+    animation: "floatSlow 6s ease-in-out infinite",
+  }}
+>
+
       {/* LOGO */}
-      <m.div
-        className="mb-6 flex h-12 w-12 items-center justify-center
+      <div
+        className="flex h-12 w-12 items-center justify-center
                    rounded-full bg-gradient-to-br from-sky-400 to-indigo-500
                    text-lg font-bold text-white
                    shadow-[0_0_35px_rgba(56,189,248,1)]"
-        initial={{ scale: 0.6, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 0.4 }}
       >
         M
-      </m.div>
+      </div>
 
       {/* ICONS */}
-      <ul className="flex flex-col gap-5">
+      <ul className="mt-4 flex flex-col gap-5">
         {sections.map(({ id, Icon }) => {
           const isActive = active === id;
 
@@ -76,10 +85,10 @@ const Sidebar = () => {
                             rounded-full transition-all duration-300
                             ${
                               isActive
-                                ? "bg-sky-400 text-slate-950 shadow-[0_0_22px_rgba(56,189,248,1)]"
-                                : "text-slate-400 hover:text-sky-400 hover:shadow-[0_0_18px_rgba(56,189,248,0.7)]"
+                                ? "bg-sky-400 text-slate-950 shadow-[0_0_25px_rgba(56,189,248,1)]"
+                                : "text-slate-400 hover:text-sky-400 hover:shadow-[0_0_20px_rgba(56,189,248,0.8)]"
                             }`}
-                whileHover={{ scale: 1.2 }}
+                whileHover={{ scale: 1.25 }}
                 whileTap={{ scale: 0.9 }}
               >
                 <Icon className="text-sm" />

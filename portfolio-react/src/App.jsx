@@ -16,7 +16,7 @@ function App() {
       <main className="px-6 md:px-16 py-20 space-y-24">
 
       <Sidebar />
-    <section id="home" className="max-w-4xl mx-auto">
+    <section id="home" className="max-w-6xl mx-auto">
       <Hero />
 
     </section>
