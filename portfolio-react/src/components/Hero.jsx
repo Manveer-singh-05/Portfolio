@@ -49,12 +49,12 @@ const Hero = () => {
       {/* CONTENT (NO CARD, NO BOX, NO MASK) */}
       <div className="relative z-10 text-center -translate-y-14">
         {/* AVATAR */}
-        <div className="relative mx-auto mb-8 h-[180px] w-[180px] rounded-full">
+        <div className="relative mx-auto mb-8 h-[200px] w-[200px] rounded-full">
           <div className="absolute inset-0 rounded-full  blur-[55px]" />
           <img
             src={profile}
             alt="Manveer Singh"
-            className="relative h-full w-full rounded-full object-cover
+            className="relative h-full w-full rounded-full object-cover object-[50%_40%]
                        shadow-[0_0_80px_rgba(56,189,248,1)] animate-float"
           />
         </div>
