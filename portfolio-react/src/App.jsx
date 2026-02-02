@@ -4,11 +4,13 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Languages from "./components/Languages";
 // import Contact from "./components/Contact";
+// import SocialContact from "./components/SocialContact";
 import Education from "./components/Education";
 import CompetitiveProgramming from "./components/CompetitiveProgramming";
 import Certificates from "./components/Certificates";
-// import SocialContact from "./components/SocialContact";
 import ContactSection from "./components/ContactSection";
+import MotionSection from "./components/MotionSection";
+
 
 function App() {
   return (
@@ -16,31 +18,31 @@ function App() {
       <main className="px-6 md:px-16 py-20 space-y-24">
         <Sidebar />
 
-        <section id="home" className="max-w-6xl mx-auto">
+        <MotionSection id="home" className="max-w-6xl mx-auto">
           <Hero />
-        </section>
+        </MotionSection>
 
-        <section id="skills" className="max-w-4xl mx-auto">
+        <MotionSection id="skills" className="max-w-4xl mx-auto">
           <Skills />
-        </section>
-        <section id="competitive" className="max-w-7xl mx-auto">
+        </MotionSection>
+        <MotionSection id="competitive" className="max-w-7xl mx-auto">
           <CompetitiveProgramming />
-        </section>
+        </MotionSection>
 
-        <section id="certificates" className="max-w-7xl mx-auto">
+        <MotionSection id="certificates" className="max-w-7xl mx-auto">
           <Certificates />
-        </section>
+        </MotionSection>
 
-        <section id="languages" className="max-w-4xl mx-auto">
+        <MotionSection   id="languages" className="max-w-4xl mx-auto">
           <Languages />
-        </section>
-        <section id="education" className="max-w-4xl mx-auto">
+        </MotionSection>
+        <MotionSection id="education" className="max-w-4xl mx-auto">
           <Education />
-        </section>
+        </MotionSection>
 
-        <section id="projects" className="max-w-6xl mx-auto">
+        <MotionSection id="projects" className="max-w-6xl mx-auto">
           <Projects />
-        </section>
+        </MotionSection>
         {/* <section id="contact" className="max-w-6xl mx-auto">
           <SocialContact />
         </section>
@@ -49,9 +51,9 @@ function App() {
           <Contact />
         </section> */}
 
-        <section id="contact" className="max-w-7xl mx-auto">
+        <MotionSection id="contact" className="max-w-7xl mx-auto">
           <ContactSection />
-        </section>
+        </MotionSection>
       </main>
     </>
   );

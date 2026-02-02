@@ -7,15 +7,20 @@ import {
   FaGlobe,
   FaGraduationCap,
   FaEnvelope,
+  FaCertificate,
+  FaTrophy
 } from "react-icons/fa";
 
 const sections = [
   { id: "home", Icon: FaHome },
   { id: "skills", Icon: FaCode },
-  { id: "projects", Icon: FaBriefcase },
+  { id: "competitive", Icon: FaTrophy },
+  { id: "certificates", Icon: FaCertificate },
   { id: "languages", Icon: FaGlobe },
   { id: "education", Icon: FaGraduationCap },
+  { id: "projects", Icon: FaBriefcase },
   { id: "contact", Icon: FaEnvelope },
+
 ];
 
 const Sidebar = () => {
@@ -62,17 +67,7 @@ const Sidebar = () => {
   }}
 >
 
-      {/* LOGO */}
-      <div
-        className="flex h-12 w-12 items-center justify-center
-                   rounded-full bg-gradient-to-br from-sky-400 to-indigo-500
-                   text-lg font-bold text-white
-                   shadow-[0_0_35px_rgba(56,189,248,1)]"
-      >
-        M
-      </div>
-
-      {/* ICONS */}
+     
       <ul className="mt-4 flex flex-col gap-5">
         {sections.map(({ id, Icon }) => {
           const isActive = active === id;
