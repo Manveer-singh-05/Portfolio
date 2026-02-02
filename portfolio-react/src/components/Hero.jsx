@@ -50,12 +50,12 @@ const Hero = () => {
       <div className="relative z-10 text-center">
         {/* AVATAR */}
         <div className="relative mx-auto mb-8 h-36 w-36 rounded-full">
-          <div className="absolute inset-0 rounded-full bg-sky-400/40 blur-[55px]" />
+          <div className="absolute inset-0 rounded-full  blur-[55px]" />
           <img
             src={profile}
             alt="Manveer Singh"
             className="relative h-full w-full rounded-full object-cover
-                       shadow-[0_0_80px_rgba(56,189,248,1)]"
+                       shadow-[0_0_80px_rgba(56,189,248,1)] animate-float"
           />
         </div>
 
