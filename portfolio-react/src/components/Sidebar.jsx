@@ -8,7 +8,7 @@ import {
   FaGraduationCap,
   FaEnvelope,
   FaCertificate,
-  FaTrophy
+  FaTrophy,
 } from "react-icons/fa";
 
 const sections = [
@@ -20,7 +20,6 @@ const sections = [
   { id: "education", Icon: FaGraduationCap },
   { id: "projects", Icon: FaBriefcase },
   { id: "contact", Icon: FaEnvelope },
-
 ];
 
 const Sidebar = () => {
@@ -47,47 +46,55 @@ const Sidebar = () => {
   }, []);
 
   return (
-    // <nav
-    //   className="fixed left-6 top-1/2 z-50 hidden md:flex
-    //              -translate-y-1/2 flex-col items-center gap-6
-    //              rounded-[30px] bg-white/5 backdrop-blur-2xl
-    //              px-3 py-5
-    //              shadow-[0_0_60px_rgba(56,189,248,0.25)]"
-    //   style={{ animation: "floatSlow 6s ease-in-out infinite" }}
-    // >
     <nav
-  className="fixed left-6 top-1/2 z-50 hidden md:flex
-             flex-col items-center gap-6
-             rounded-[30px] bg-white/5 backdrop-blur-2xl
-             px-3 py-5
-             shadow-[0_0_60px_rgba(56,189,248,0.25)]"
-  style={{
-    transform: "translateY(-50%)",
-    animation: "floatSlow 4s ease-in-out infinite",
-  }}
->
-
-     
+      className="fixed left-6 top-1/2 z-50 hidden md:flex
+                 flex-col items-center gap-6
+                 rounded-[30px] bg-white/5 backdrop-blur-2xl
+                 px-3 py-5
+                 shadow-[0_0_60px_rgba(56,189,248,0.25)]"
+      style={{
+        transform: "translateY(-50%)",
+        animation: "floatSlow 4s ease-in-out infinite",
+      }}
+    >
       <ul className="mt-4 flex flex-col gap-5">
         {sections.map(({ id, Icon }) => {
           const isActive = active === id;
 
           return (
-            <li key={id}>
-              <m.a
+            <li key={id} className="relative">
+              <a
                 href={`#${id}`}
-                className={`flex h-10 w-10 items-center justify-center
-                            rounded-full transition-all duration-300
-                            ${
-                              isActive
-                                ? "bg-sky-400 text-slate-950 shadow-[0_0_25px_rgba(56,189,248,1)]"
-                                : "text-slate-400 hover:text-sky-400 hover:shadow-[0_0_20px_rgba(56,189,248,0.8)]"
-                            }`}
-                whileHover={{ scale: 1.25 }}
-                whileTap={{ scale: 0.9 }}
+                className="relative flex h-10 w-10 items-center justify-center"
               >
-                <Icon className="text-sm" />
-              </m.a>
+                {/* ACTIVE INDICATOR (MAGIC) */}
+                {isActive && (
+                  <m.div
+                    layoutId="sidebar-indicator"
+                    className="absolute inset-0 rounded-full
+                               bg-sky-400/20
+                               shadow-[0_0_25px_rgba(56,189,248,1)]"
+                    transition={{
+                      type: "spring",
+                      stiffness: 300,
+                      damping: 25,
+                    }}
+                  />
+                )}
+
+                {/* ICON */}
+                <m.div
+                  whileHover={{ scale: 1.25 }}
+                  whileTap={{ scale: 0.9 }}
+                  className={`relative z-10 flex items-center justify-center
+                    ${isActive
+                      ? "text-sky-400 scale-110"
+                      : "text-slate-400 hover:text-sky-400"
+                    }`}
+                >
+                  <Icon className="text-sm" />
+                </m.div>
+              </a>
             </li>
           );
         })}

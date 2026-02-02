@@ -18,11 +18,11 @@ function App() {
       <main className="px-6 md:px-16 py-20 space-y-24">
         <Sidebar />
 
-        <MotionSection id="home" className="max-w-6xl mx-auto">
+        <MotionSection id="home" className="max-w-7xl mx-auto">
           <Hero />
         </MotionSection>
 
-        <MotionSection id="skills" className="max-w-4xl mx-auto">
+        <MotionSection id="skills" className="max-w-6xl mx-auto">
           <Skills />
         </MotionSection>
         <MotionSection id="competitive" className="max-w-7xl mx-auto">
@@ -33,7 +33,7 @@ function App() {
           <Certificates />
         </MotionSection>
 
-        <MotionSection   id="languages" className="max-w-4xl mx-auto">
+        <MotionSection   id="languages" className="max-w-7xl mx-auto">
           <Languages />
         </MotionSection>
         <MotionSection id="education" className="max-w-4xl mx-auto">
