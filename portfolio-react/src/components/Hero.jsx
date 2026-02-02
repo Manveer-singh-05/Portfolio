@@ -38,18 +38,16 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
-
       {/* HORIZONTAL HERO GLOW (KEY DIFFERENCE) */}
       <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
         <div
           className="w-[1200px] h-[420px] rounded-full 
-                     bg-sky-400/25 blur-[220px]"
+                      blur-[220px]"
         />
       </div>
 
       {/* CONTENT (NO CARD, NO BOX, NO MASK) */}
       <div className="relative z-10 text-center">
-
         {/* AVATAR */}
         <div className="relative mx-auto mb-8 h-36 w-36 rounded-full">
           <div className="absolute inset-0 rounded-full bg-sky-400/40 blur-[55px]" />
@@ -64,8 +62,10 @@ const Hero = () => {
         {/* TITLE */}
         <h1 className="text-4xl md:text-5xl font-semibold tracking-wide mb-3">
           Hi, I&apos;m{" "}
-          <span className="bg-gradient-to-r from-sky-400 via-cyan-300 to-indigo-400
-                           bg-clip-text text-transparent">
+          <span
+            className="bg-gradient-to-r from-sky-400 via-cyan-300 to-indigo-400
+                           bg-clip-text text-transparent"
+          >
             Manveer Singh
           </span>
         </h1>
@@ -80,8 +80,10 @@ const Hero = () => {
         </h3>
 
         {/* DESCRIPTION */}
-        <p className="mx-auto max-w-2xl text-sm md:text-base
-                      text-slate-300 leading-relaxed mb-10">
+        <p
+          className="mx-auto max-w-2xl text-sm md:text-base
+                      text-slate-300 leading-relaxed mb-10"
+        >
           I build clean, responsive web applications and enjoy solving
           real-world problems using modern technologies.
         </p>

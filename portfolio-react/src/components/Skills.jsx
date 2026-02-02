@@ -37,7 +37,8 @@ const Skills = () => {
 
       {/* BACKGROUND GLOW */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div className="h-[800px] w-[800px] rounded-full bg-sky-400/20 blur-[300px]" />
+        {/* bg-sky-400/20  i applied this in my below div*/}
+        <div className="h-[800px] w-[800px] rounded-full  blur-[300px]" />
       </div>
 
       <div className="relative w-full max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-28 items-center z-10">
