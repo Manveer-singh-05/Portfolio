@@ -6,6 +6,7 @@ import Languages from "./components/Languages";
 import Contact from "./components/Contact";
 import Education from "./components/Education";
 import CompetitiveProgramming from "./components/CompetitiveProgramming";
+import Certificates from "./components/Certificates";
 
 function App() {
   return (
@@ -23,6 +24,11 @@ function App() {
         <section id="competitive" className="max-w-7xl mx-auto">
           <CompetitiveProgramming />
         </section>
+
+        <section id="certificates" className="max-w-7xl mx-auto">
+          <Certificates />
+        </section>
+
         <section id="languages" className="max-w-4xl mx-auto">
           <Languages />
         </section>

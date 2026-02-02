@@ -21,7 +21,7 @@ const platforms = [
       { label: "Active Streak", value: "523 days", icon: FaFire },
       { label: "Contests", value: "15", icon: FaTrophy },
     ],
-    link: "https://leetcode.com/",
+    link: "https://leetcode.com/u/manveersingh0501l/",
   },
   {
     name: "CodeForces",
@@ -33,7 +33,7 @@ const platforms = [
       { label: "Problems Solved", value: "350", icon: FaFire },
       { label: "Contests", value: "25", icon: FaTrophy },
     ],
-    link: "https://codeforces.com/",
+    link: "https://codeforces.com/profile/manveersingh0501l",
   },
   {
     name: "CodeChef",
@@ -45,7 +45,7 @@ const platforms = [
       { label: "Problems Solved", value: "150", icon: FaFire },
       { label: "Contests", value: "15", icon: FaTrophy },
     ],
-    link: "https://www.codechef.com/",
+    link: "https://www.codechef.com/users/manveer_05",
   },
 ];
 
