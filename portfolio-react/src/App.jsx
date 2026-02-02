@@ -7,6 +7,8 @@ import Contact from "./components/Contact";
 import Education from "./components/Education";
 import CompetitiveProgramming from "./components/CompetitiveProgramming";
 import Certificates from "./components/Certificates";
+import SocialContact from "./components/SocialContact";
+import ContactSection from "./components/ContactSection";
 
 function App() {
   return (
@@ -39,9 +41,16 @@ function App() {
         <section id="projects" className="max-w-6xl mx-auto">
           <Projects />
         </section>
+        <section id="contact" className="max-w-6xl mx-auto">
+          <SocialContact />
+        </section>
 
         <section id="contact" className="max-w-4xl mx-auto">
           <Contact />
+        </section>
+
+        <section id="contact" className="max-w-7xl mx-auto">
+          <ContactSection />
         </section>
       </main>
     </>
