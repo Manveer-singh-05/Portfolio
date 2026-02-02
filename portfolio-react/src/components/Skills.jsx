@@ -1,5 +1,7 @@
 import { useEffect, useRef } from "react";
-import { SiCplusplus , SiMongodb } from "react-icons/si";
+import { motion } from "framer-motion";
+
+import { SiCplusplus, SiMongodb } from "react-icons/si";
 import {
   FaReact,
   FaHtml5,
@@ -9,7 +11,6 @@ import {
   FaJava,
   FaPython,
   FaCuttlefish,
-
 } from "react-icons/fa";
 
 /* =======================
@@ -42,8 +43,29 @@ const orbitIconsOuter = [
   { Icon: FaPython, color: "text-orange-400", angle: 60 },
   { Icon: FaCuttlefish, color: "text-blue-400", angle: 120 },
   { Icon: SiCplusplus, color: "text-yellow-300", angle: 180 },
-  { Icon: SiMongodb, color: "text-indigo-400", angle: 240 },
+  { Icon: SiMongodb, color: "text-green-500", angle: 240 },
 ];
+
+/* =======================
+   ORBIT MOTION CONFIGS
+======================= */
+const innerOrbitMotion = {
+  animate: { rotate: 360 },
+  transition: {
+    repeat: Infinity,
+    duration: 16,
+    ease: "linear",
+  },
+};
+
+const outerOrbitMotion = {
+  animate: { rotate: -360 },
+  transition: {
+    repeat: Infinity,
+    duration: 22,
+    ease: "linear",
+  },
+};
 
 const Skills = () => {
   const barsRef = useRef([]);
@@ -71,64 +93,62 @@ const Skills = () => {
 
           {/* CORE */}
           <div
-            className="absolute h-28 w-28 rounded-full 
+            className="absolute h-28 w-28 rounded-full
                        bg-gradient-to-r from-sky-400 to-indigo-400
                        shadow-[0_0_80px_rgba(56,189,248,1)]"
           />
 
-          {/* INNER ORBIT RING */}
+          {/* INNER RING */}
           <div className="absolute h-72 w-72 rounded-full border border-sky-400/15" />
 
-          {/* OUTER ORBIT RING */}
+          {/* OUTER RING */}
           <div className="absolute h-[420px] w-[420px] rounded-full border border-sky-400/10" />
 
-          {/* =======================
-              INNER ROTATING ORBIT
-          ======================= */}
-          <div className="absolute h-72 w-72 animate-orbit">
+          {/* INNER ORBIT */}
+          <motion.div className="absolute h-72 w-72" {...innerOrbitMotion}>
             {orbitIconsInner.map(({ Icon, color, angle }, index) => (
               <div
                 key={index}
                 className="absolute top-1/2 left-1/2"
                 style={{
-                  transform: `rotate(${angle}deg) translateY(-144px) rotate(-${angle}deg)`,
+                  transform: `rotate(${angle}deg) translateY(-144px)`,
                 }}
               >
-                <div
+                <motion.div
+                  whileHover={{ scale: 1.35 }}
+                  transition={{ type: "spring", stiffness: 200 }}
                   className="p-3 rounded-full bg-white/5 backdrop-blur
-                             shadow-[0_0_20px_rgba(56,189,248,0.8)]
-                             hover:shadow-[0_0_45px_rgba(56,189,248,0.9)]
-                             hover:scale-125 transition-all duration-300"
+                             shadow-[0_0_25px_rgba(56,189,248,0.8)]
+                             hover:shadow-[0_0_55px_rgba(56,189,248,1)]"
                 >
                   <Icon className={`text-3xl ${color}`} />
-                </div>
+                </motion.div>
               </div>
             ))}
-          </div>
+          </motion.div>
 
-          {/* =======================
-              OUTER ROTATING ORBIT
-          ======================= */}
-          <div className="absolute h-[420px] w-[420px] orbit-slow">
+          {/* OUTER ORBIT */}
+          <motion.div className="absolute h-[420px] w-[420px]" {...outerOrbitMotion}>
             {orbitIconsOuter.map(({ Icon, color, angle }, index) => (
               <div
                 key={index}
                 className="absolute top-1/2 left-1/2"
                 style={{
-                  transform: `rotate(${angle}deg) translateY(-210px) rotate(-${angle}deg)`,
+                  transform: `rotate(${angle}deg) translateY(-210px)`,
                 }}
               >
-                <div
+                <motion.div
+                  whileHover={{ scale: 1.35 }}
+                  transition={{ type: "spring", stiffness: 200 }}
                   className="p-3 rounded-full bg-white/5 backdrop-blur
                              shadow-[0_0_20px_rgba(56,189,248,0.6)]
-                             hover:shadow-[0_0_45px_rgba(56,189,248,0.9)]
-                             hover:scale-125 transition-all duration-300"
+                             hover:shadow-[0_0_45px_rgba(56,189,248,0.9)]"
                 >
                   <Icon className={`text-3xl ${color}`} />
-                </div>
+                </motion.div>
               </div>
             ))}
-          </div>
+          </motion.div>
 
         </div>
 

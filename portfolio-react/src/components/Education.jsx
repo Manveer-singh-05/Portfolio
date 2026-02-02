@@ -3,17 +3,17 @@ import { motion } from "framer-motion";
 const educationData = [
   {
     degree: "B.Tech in Computer Science & Engineering",
-    institute: "XYZ University",
+    institute: "Lovely Professional University",
     year: "2023 – 2027",
   },
   {
     degree: "Senior Secondary (Class XII)",
-    institute: "CBSE Board",
+    institute: "HBSE Board",
     year: "2022 – 2023",
   },
   {
     degree: "Secondary (Class X)",
-    institute: "CBSE Board",
+    institute: "HBSE Board",
     year: "2020 – 2021",
   },
 ];
