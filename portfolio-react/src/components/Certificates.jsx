@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FaCertificate, FaExternalLinkAlt } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const certificatesData = [
   {
@@ -83,14 +84,16 @@ const Certificates = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
 
         {visibleCertificates.map((cert, index) => (
-          <div
+          <motion.div
             key={index}
-            className="relative rounded-2xl p-6 bg-white/5 backdrop-blur
-                       border border-white/10
-                       hover:border-sky-400/40
-                       shadow-[0_0_30px_rgba(56,189,248,0.15)]
-                       hover:shadow-[0_0_60px_rgba(56,189,248,0.35)]
-                       transition-all duration-300"
+            whileHover={{ y: -8, scale: 1.03 }}
+  transition={{ type: "spring", stiffness: 200 }}
+             className="relative rounded-2xl p-6 bg-white/5 backdrop-blur
+             border border-white/10
+             hover:border-sky-400/40
+             shadow-[0_0_30px_rgba(56,189,248,0.15)]
+             hover:shadow-[0_0_60px_rgba(56,189,248,0.35)]
+             transition-colors duration-300"
           >
 
             {/* ICON */}
@@ -121,7 +124,7 @@ const Certificates = () => {
               Issued: {cert.date}
             </p>
 
-          </div>
+          </motion.div>
         ))}
       </div>
 
