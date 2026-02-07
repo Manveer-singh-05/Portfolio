@@ -89,10 +89,26 @@ transition={{ type: "spring", stiffness: 200 }}
             >
 
               {/* TOP BAR */}
-              <div
+              {/* <div
                 className={`absolute inset-x-0 top-0 h-1 rounded-t-2xl
                             bg-gradient-to-r ${platform.accent}`}
-              />
+              /> */}
+
+{/* PROGRESS TOP BAR */}
+<div className="absolute inset-x-0 top-0 h-1 overflow-hidden rounded-t-2xl bg-white/10">
+  <motion.div
+    className={`h-full bg-gradient-to-r ${platform.accent}`}
+    initial={{ width: "0%" }}
+    animate={{ width: "100%" }}
+    transition={{
+      duration: 1.8,
+      ease: "easeInOut",
+      delay: index * 0.15,
+    }}
+  />
+</div>
+
+
 
               {/* HEADER */}
               <div className="flex items-center justify-between mb-6">
