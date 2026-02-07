@@ -18,9 +18,9 @@ const platforms = [
     icon: SiLeetcode,
     accent: "from-yellow-400 to-orange-500",
     stats: [
-      { label: "Problems Solved", value: "965", icon: FaCode },
-      { label: "Active Streak", value: "523 days", icon: FaFire },
-      { label: "Contests", value: "15", icon: FaTrophy },
+      { label: "Problems Solved", value: "140", icon: FaCode },
+      { label: "Active Streak", value: "21 days", icon: FaFire },
+      { label: "Contests", value: "0", icon: FaTrophy },
     ],
     link: "https://leetcode.com/u/manveersingh0501l/",
   },
