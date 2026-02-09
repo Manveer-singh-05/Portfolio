@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion as m } from "framer-motion";
+import Skills3D from "./Skills3D";
 import {
   FaReact,
   FaHtml5,
@@ -25,36 +26,34 @@ const skillsData = [
 /* =======================
    ORBIT ICONS
 ======================= */
-const orbitIconsInner = [
-  { Icon: FaReact, color: "text-cyan-400", angle: 0 },
-  { Icon: FaHtml5, color: "text-orange-400", angle: 72 },
-  { Icon: FaCss3Alt, color: "text-blue-400", angle: 144 },
-  { Icon: FaJs, color: "text-yellow-300", angle: 216 },
-  { Icon: FaDatabase, color: "text-indigo-400", angle: 288 },
-];
+// const orbitIconsInner = [
+//   { Icon: FaReact, color: "text-cyan-400", angle: 0 },
+//   { Icon: FaHtml5, color: "text-orange-400", angle: 72 },
+//   { Icon: FaCss3Alt, color: "text-blue-400", angle: 144 },
+//   { Icon: FaJs, color: "text-yellow-300", angle: 216 },
+//   { Icon: FaDatabase, color: "text-indigo-400", angle: 288 },
+// ];
 
-const orbitIconsOuter = [
-  { Icon: FaJava, color: "text-red-400", angle: 0 },
-  { Icon: FaPython, color: "text-yellow-400", angle: 60 },
-  { Icon: SiCplusplus, color: "text-blue-400", angle: 120 },
-  { Icon: SiMongodb, color: "text-green-400", angle: 180 },
-];
+// const orbitIconsOuter = [
+//   { Icon: FaJava, color: "text-red-400", angle: 0 },
+//   { Icon: FaPython, color: "text-yellow-400", angle: 60 },
+//   { Icon: SiCplusplus, color: "text-blue-400", angle: 120 },
+//   { Icon: SiMongodb, color: "text-green-400", angle: 180 },
+// ];
 
 const Skills = () => {
   const [hoveredSkill, setHoveredSkill] = useState(null);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center px-8 py-20">
-
-      <div className="relative w-full max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-28 items-center">
-
+      <div className="relative w-full max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-28 items-stretch">
         {/* =======================
             LEFT – ORBIT SYSTEM
         ======================= */}
-        <div className="relative flex items-center justify-center">
+        {/* <div className="relative flex items-center justify-center"> */}
 
-          {/* CORE */}
-          <m.div
+        {/* CORE */}
+        {/* <m.div
             animate={{
               boxShadow: hoveredSkill
                 ? "0 0 120px rgba(56,189,248,1)"
@@ -64,16 +63,16 @@ const Skills = () => {
             transition={{ duration: 0.4 }}
             className="absolute h-28 w-28 rounded-full
                        bg-gradient-to-r from-sky-400 to-indigo-400"
-          />
+          /> */}
 
-          {/* INNER RING */}
-          <div className="absolute h-72 w-72 rounded-full border border-sky-400/10" />
+        {/* INNER RING */}
+        {/* <div className="absolute h-72 w-72 rounded-full border border-sky-400/10" /> */}
 
-          {/* OUTER RING */}
-          <div className="absolute h-[420px] w-[420px] rounded-full border border-sky-400/5" />
+        {/* OUTER RING */}
+        {/* <div className="absolute h-[420px] w-[420px] rounded-full border border-sky-400/5" /> */}
 
-          {/* INNER ORBIT */}
-          <m.div
+        {/* INNER ORBIT */}
+        {/* <m.div
             className="absolute h-72 w-72"
             animate={{ rotate: 360 }}
             transition={{
@@ -102,10 +101,10 @@ const Skills = () => {
                 </m.div>
               </div>
             ))}
-          </m.div>
+          </m.div> */}
 
-          {/* OUTER ORBIT */}
-          <m.div
+        {/* OUTER ORBIT */}
+        {/* <m.div
             className="absolute h-[420px] w-[420px]"
             animate={{ rotate: -360 }}
             transition={{
@@ -135,19 +134,25 @@ const Skills = () => {
               </div>
             ))}
           </m.div>
+        </div> */}
+        <div className="flex items-center justify-center">
+          <Skills3D />
         </div>
 
         {/* =======================
             RIGHT – SKILLS CARD
         ======================= */}
-        <div className="relative rounded-3xl border border-white/10
+        <div
+          className="relative rounded-3xl border border-white/10
                         bg-white/5 backdrop-blur-xl
                         p-8 md:p-10
-                        shadow-[0_0_60px_rgba(56,189,248,0.15)]">
-
-          <div className="absolute inset-0 rounded-3xl
+                        shadow-[0_0_60px_rgba(56,189,248,0.15)]"
+        >
+          <div
+            className="absolute inset-0 rounded-3xl
                           bg-gradient-to-r from-sky-400/30 via-indigo-400/30 to-sky-400/30
-                          opacity-40 blur-[1px]" />
+                          opacity-40 blur-[1px]"
+          />
 
           <div className="relative z-10">
             <h2 className="text-3xl md:text-4xl font-semibold mb-3">
@@ -193,7 +198,6 @@ const Skills = () => {
             </div>
           </div>
         </div>
-
       </div>
     </section>
   );
