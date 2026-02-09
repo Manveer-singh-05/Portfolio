@@ -90,3 +90,21 @@ body::after {
   }
 }
 
+@keyframes arrow {
+  0% {
+    transform: translateY(0);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(10px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0.8;
+  }
+}
+
+.animate-arrow {
+  animation: arrow 1.8s infinite ease-in-out;
+}
