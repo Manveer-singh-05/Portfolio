@@ -1,4 +1,6 @@
+import { useRef } from "react";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
 import {
   FaLinkedinIn,
   FaGithub,
@@ -22,7 +24,7 @@ const socials = [
   {
     name: "Gmail",
     icon: FaEnvelope,
-    link: "mailto:manveersingh0501l@@gmail.com",
+    link: "mailto:manveersingh0501l@gmail.com",
     color: "from-red-400 to-orange-500",
   },
   {
@@ -33,22 +35,33 @@ const socials = [
   },
 ];
 
-const cardHover = {
-  whileHover: {
-    y: -8,
-    scale: 1.02,
-  },
-  transition: {
-    type: "spring",
-    stiffness: 180,
-    damping: 14,
-  },
-};
-
 const ContactSection = () => {
+  const formRef = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_2lekgi3",
+        "template_dqi6tr1",
+        formRef.current,
+        "YDR71vEmh6mTAcPN9"
+      )
+      .then(
+        () => {
+          alert("Message sent successfully 🚀");
+          formRef.current.reset();
+        },
+        (error) => {
+          alert("Failed to send message ❌");
+          console.error(error);
+        }
+      );
+  };
+
   return (
     <section className="relative min-h-screen px-6 md:px-16 py-20 flex items-center justify-center">
-
       <div className="w-full max-w-7xl">
 
         {/* HEADER */}
@@ -69,15 +82,18 @@ const ContactSection = () => {
 
           {/* ================= FORM ================= */}
           <motion.div
-            {...cardHover}
+            whileHover={{ y: -6 }}
+            transition={{ type: "spring", stiffness: 180 }}
             className="rounded-2xl p-8 bg-white/5 backdrop-blur
                        border border-white/10
                        shadow-[0_0_40px_rgba(56,189,248,0.2)]"
           >
-            <form className="space-y-6">
+            <form ref={formRef} onSubmit={sendEmail} className="space-y-6">
               <input
                 type="text"
+                name="from_name"
                 placeholder="Your Name"
+                required
                 className="w-full px-5 py-4 rounded-xl bg-white/5
                            border border-white/10 text-slate-200
                            placeholder:text-slate-500
@@ -86,7 +102,9 @@ const ContactSection = () => {
 
               <input
                 type="email"
+                name="from_email"
                 placeholder="Your Email"
+                required
                 className="w-full px-5 py-4 rounded-xl bg-white/5
                            border border-white/10 text-slate-200
                            placeholder:text-slate-500
@@ -94,8 +112,10 @@ const ContactSection = () => {
               />
 
               <textarea
+                name="message"
                 rows="5"
                 placeholder="Your Message"
+                required
                 className="w-full px-5 py-4 rounded-xl bg-white/5
                            border border-white/10 text-slate-200
                            placeholder:text-slate-500
@@ -115,8 +135,8 @@ const ContactSection = () => {
             </form>
           </motion.div>
 
-          {/* ================= SOCIAL CARDS ================= */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          {/* ================= SOCIAL ORBS ================= */}
+          <div className="grid grid-cols-2 gap-10 place-items-center">
             {socials.map((item, index) => {
               const Icon = item.icon;
 
@@ -126,39 +146,33 @@ const ContactSection = () => {
                   href={item.link}
                   target="_blank"
                   rel="noreferrer"
-                  {...cardHover}
-                  className="group relative rounded-2xl p-6
+                  whileHover={{ scale: 1.15, rotate: 3 }}
+                  transition={{ type: "spring", stiffness: 220, damping: 12 }}
+                  className="group relative aspect-square w-40 rounded-full
                              bg-white/5 backdrop-blur
                              border border-white/10
-                             hover:border-sky-400/40
-                             shadow-[0_0_30px_rgba(56,189,248,0.15)]
-                             hover:shadow-[0_0_60px_rgba(56,189,248,0.35)]
-                             transition-all"
+                             hover:border-sky-400/50
+                             shadow-[0_0_30px_rgba(56,189,248,0.25)]
+                             hover:shadow-[0_0_90px_rgba(56,189,248,0.8)]
+                             flex items-center justify-center
+                             cursor-pointer"
                 >
-                  {/* TOP STRIP */}
+                  {/* INNER ORB */}
                   <div
-                    className={`absolute inset-x-0 top-0 h-1 rounded-t-2xl
-                                bg-gradient-to-r ${item.color}`}
-                  />
+                    className={`h-20 w-20 rounded-full flex items-center justify-center
+                                bg-gradient-to-r ${item.color}
+                                shadow-[0_0_35px_rgba(56,189,248,0.9)]
+                                group-hover:scale-125 transition`}
+                  >
+                    <Icon className="text-3xl text-slate-950" />
+                  </div>
 
-                  <div className="flex items-center gap-5">
-                    <div
-                      className={`h-14 w-14 rounded-full flex items-center justify-center
-                                  bg-gradient-to-r ${item.color}
-                                  shadow-[0_0_25px_rgba(56,189,248,0.8)]
-                                  group-hover:scale-110 transition`}
-                    >
-                      <Icon className="text-xl text-slate-950" />
-                    </div>
-
-                    <div>
-                      <h3 className="text-lg font-semibold text-slate-100">
-                        {item.name}
-                      </h3>
-                      <p className="text-sm text-slate-400">
-                        Click to connect
-                      </p>
-                    </div>
+                  {/* LABEL */}
+                  <div className="absolute -bottom-7 text-center">
+                    <p className="text-sm font-medium text-slate-300
+                                  group-hover:text-sky-400 transition">
+                      {item.name}
+                    </p>
                   </div>
                 </motion.a>
               );
