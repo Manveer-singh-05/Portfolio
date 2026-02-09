@@ -12,6 +12,15 @@ const ICON_URLS = [
   "/assest/skills/python-svgrepo-com.svg",
   "/assest/skills/docker-svgrepo-com.svg",
   "/assest/skills/git-svgrepo-com.svg",
+  "/assest/skills/linux-svgrepo-com.svg",
+  "/assest/skills/cpp-svgrepo-com.svg",
+  "/assest/skills/php-svgrepo-com.svg",
+  "/assest/skills/java-svgrepo-com.svg",
+  "/assest/skills/reddit-svgrepo-com.svg",
+  "/assest/skills/github-svgrepo-com.svg",
+  "assest/skills/tailwind-svgrepo-com.svg",
+  "assest/skills/database-svgrepo-com.svg",
+
 ];
 
 const SkillIcon = ({ texture, position }) => {
@@ -43,7 +52,7 @@ const Globe = () => {
 
   // --- MEDIUM SCALE SETTINGS ---
   const count = 20; 
-  const radius = 2.5; // Radius 2.5 is the sweet spot for "Medium"
+  const radius = 2.3; // Radius 2.5 is the sweet spot for "Medium"
   // ------------------------------
 
   const iconPositions = useMemo(() => {
