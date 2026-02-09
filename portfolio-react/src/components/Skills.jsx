@@ -44,7 +44,7 @@ const Skills = () => {
   const [hoveredSkill, setHoveredSkill] = useState(null);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-8">
+    <section className="relative min-h-screen flex items-center justify-center px-8 py-20">
 
       <div className="relative w-full max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-28 items-center">
 
@@ -67,10 +67,10 @@ const Skills = () => {
           />
 
           {/* INNER RING */}
-          <div className="absolute h-72 w-72 rounded-full border border-sky-400/15" />
+          <div className="absolute h-72 w-72 rounded-full border border-sky-400/10" />
 
           {/* OUTER RING */}
-          <div className="absolute h-[420px] w-[420px] rounded-full border border-sky-400/10" />
+          <div className="absolute h-[420px] w-[420px] rounded-full border border-sky-400/5" />
 
           {/* INNER ORBIT */}
           <m.div
