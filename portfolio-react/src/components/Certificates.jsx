@@ -2,42 +2,43 @@ import { useState } from "react";
 import { FaCertificate, FaExternalLinkAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
 
+
 const certificatesData = [
   {
     title: "Data Structures & Algorithms",
     issuer: "Coursera",
     date: "2024",
-    link: "#",
+    link: "/certificates/problem_solving_basic certificate.pdf",
   },
   {
     title: "React Developer",
     issuer: "Udemy",
     date: "2024",
-    link: "#",
+    link: "/certificates/problem_solving_basic certificate.pdf",
   },
   {
     title: "Database Management Systems",
     issuer: "NPTEL",
     date: "2023",
-    link: "#",
+    link: "/certificates/problem_solving_basic certificate.pdf",
   },
   {
     title: "Operating Systems",
     issuer: "NPTEL",
     date: "2023",
-    link: "#",
+    link: "/certificates/problem_solving_basic certificate.pdf",
   },
   {
     title: "Java Programming",
     issuer: "Coursera",
     date: "2023",
-    link: "#",
+    link: "/certificates/problem_solving_basic certificate.pdf",
   },
   {
     title: "Problem Solving (C++)",
     issuer: "HackerRank",
-    date: "2023",
-    link: "#",
+    date: "2025",
+    link: "/certificates/problem_solving_basic certificate.pdf",
   },
 
   /* ===== EXTRA CERTIFICATES (VISIBLE AFTER CLICK) ===== */
@@ -45,13 +46,13 @@ const certificatesData = [
     title: "Python for Everybody",
     issuer: "Coursera",
     date: "2022",
-    link: "#",
+    link: "/certificates/problem_solving_basic certificate.pdf",
   },
   {
     title: "SQL Advanced",
     issuer: "HackerRank",
     date: "2022",
-    link: "#",
+    link: "/certificates/problem_solving_basic certificate.pdf",
   },
 ];
 
