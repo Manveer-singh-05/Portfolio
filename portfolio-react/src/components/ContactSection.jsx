@@ -10,25 +10,25 @@ const socials = [
   {
     name: "LinkedIn",
     icon: FaLinkedinIn,
-    link: "https://linkedin.com/in/yourusername",
+    link: "https://www.linkedin.com/in/manveersingh05/",
     color: "from-blue-400 to-cyan-500",
   },
   {
     name: "GitHub",
     icon: FaGithub,
-    link: "https://github.com/yourusername",
+    link: "https://github.com/Manveer-singh-05",
     color: "from-gray-400 to-gray-600",
   },
   {
     name: "Gmail",
     icon: FaEnvelope,
-    link: "mailto:yourmail@gmail.com",
+    link: "mailto:manveersingh0501l@@gmail.com",
     color: "from-red-400 to-orange-500",
   },
   {
     name: "Twitter",
     icon: FaTwitter,
-    link: "https://twitter.com/yourusername",
+    link: "https://x.com/singh_manveer05",
     color: "from-sky-400 to-blue-500",
   },
 ];
