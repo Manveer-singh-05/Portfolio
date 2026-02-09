@@ -119,7 +119,7 @@ transition={{ type: "spring", stiffness: 200 }}
                   </h3>
                 </div>
 
-                <a
+                <a title="profile"
                   href={platform.link}
                   target="_blank"
                   rel="noreferrer"
