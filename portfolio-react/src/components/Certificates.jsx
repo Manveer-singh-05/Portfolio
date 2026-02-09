@@ -6,33 +6,33 @@ import { motion } from "framer-motion";
 const certificatesData = [
   {
     title: "Data Structures & Algorithms",
-    issuer: "Coursera",
+    issuer: "LPU",
     date: "2024",
-    link: "/certificates/problem_solving_basic certificate.pdf",
+    link: "/certificates/jdsa by lpu.pdf",
   },
   {
-    title: "React Developer",
-    issuer: "Udemy",
-    date: "2024",
-    link: "/certificates/problem_solving_basic certificate.pdf",
+    title: "React Basics",
+    issuer: "HackerRank",
+    date: "2025",
+    link: "/certificates/react_basic certificate.pdf",
   },
   {
-    title: "Database Management Systems",
+    title: "JavaScript Basics",
+    issuer: "HackerRank",
+    date: "2025",
+    link: "/certificates/javascript_basic certificate.pdf",
+  },
+  {
+    title: "Cloud Computing",
     issuer: "NPTEL",
-    date: "2023",
-    link: "/certificates/problem_solving_basic certificate.pdf",
+    date: "2025",
+    link: "/certificates/cloud computing.pdf",
   },
   {
-    title: "Operating Systems",
-    issuer: "NPTEL",
-    date: "2023",
-    link: "/certificates/problem_solving_basic certificate.pdf",
-  },
-  {
-    title: "Java Programming",
-    issuer: "Coursera",
-    date: "2023",
-    link: "/certificates/problem_solving_basic certificate.pdf",
+    title: "Node JS Basics",
+    issuer: "HackerRank",
+    date: "2025",
+    link: "/certificates/nodejs_basic certificate.pdf",
   },
   {
     title: "Problem Solving (C++)",
@@ -44,15 +44,21 @@ const certificatesData = [
   /* ===== EXTRA CERTIFICATES (VISIBLE AFTER CLICK) ===== */
   {
     title: "Python for Everybody",
-    issuer: "Coursera",
-    date: "2022",
-    link: "/certificates/problem_solving_basic certificate.pdf",
+    issuer: "HackerRank",
+    date: "2025",
+    link: "/certificates/python_basic certificate.pdf",
   },
   {
-    title: "SQL Advanced",
+    title: "SQL Basics",
     issuer: "HackerRank",
-    date: "2022",
-    link: "/certificates/problem_solving_basic certificate.pdf",
+    date: "2025",
+    link: "/certificates/sql_basic certificate.pdf",
+  },
+  {
+    title: "JAVA Programming",
+    issuer: "LPU",
+    date: "2024",
+    link: "/certificates/java by lpu.pdf",
   },
 ];
 
