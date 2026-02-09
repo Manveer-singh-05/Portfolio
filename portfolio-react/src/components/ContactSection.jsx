@@ -1,12 +1,7 @@
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
-import {
-  FaLinkedinIn,
-  FaGithub,
-  FaEnvelope,
-  FaTwitter,
-} from "react-icons/fa";
+import { FaLinkedinIn, FaGithub, FaEnvelope, FaTwitter } from "react-icons/fa";
 
 const socials = [
   {
@@ -46,7 +41,7 @@ const ContactSection = () => {
         "service_2lekgi3",
         "template_dqi6tr1",
         formRef.current,
-        "YDR71vEmh6mTAcPN9"
+        "YDR71vEmh6mTAcPN9",
       )
       .then(
         () => {
@@ -56,14 +51,13 @@ const ContactSection = () => {
         (error) => {
           alert("Failed to send message ❌");
           console.error(error);
-        }
+        },
       );
   };
 
   return (
     <section className="relative min-h-screen px-6 md:px-16 py-20 flex items-center justify-center">
       <div className="w-full max-w-7xl">
-
         {/* HEADER */}
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-semibold mb-4">
@@ -79,7 +73,6 @@ const ContactSection = () => {
 
         {/* CONTENT */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-
           {/* ================= FORM ================= */}
           <motion.div
             whileHover={{ y: -6 }}
@@ -144,6 +137,13 @@ const ContactSection = () => {
                 <motion.a
                   key={index}
                   href={item.link}
+                  animate={{ y: [0, -6, 0] }}
+                  // transition={{
+                  //   duration: 3,
+                  //   repeat: Infinity,
+                  //   ease: "easeInOut",
+                  //   delay: index * 0.3,
+                  // }}
                   target="_blank"
                   rel="noreferrer"
                   whileHover={{ scale: 1.15, rotate: 3 }}
@@ -169,8 +169,10 @@ const ContactSection = () => {
 
                   {/* LABEL */}
                   <div className="absolute -bottom-7 text-center">
-                    <p className="text-sm font-medium text-slate-300
-                                  group-hover:text-sky-400 transition">
+                    <p
+                      className="text-sm font-medium text-slate-300
+                                  group-hover:text-sky-400 transition"
+                    >
                       {item.name}
                     </p>
                   </div>
@@ -178,7 +180,6 @@ const ContactSection = () => {
               );
             })}
           </div>
-
         </div>
       </div>
     </section>
