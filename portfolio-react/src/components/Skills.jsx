@@ -23,118 +23,13 @@ const skillsData = [
   { name: "OS & Computer Networks", level: 70 },
 ];
 
-/* =======================
-   ORBIT ICONS
-======================= */
-// const orbitIconsInner = [
-//   { Icon: FaReact, color: "text-cyan-400", angle: 0 },
-//   { Icon: FaHtml5, color: "text-orange-400", angle: 72 },
-//   { Icon: FaCss3Alt, color: "text-blue-400", angle: 144 },
-//   { Icon: FaJs, color: "text-yellow-300", angle: 216 },
-//   { Icon: FaDatabase, color: "text-indigo-400", angle: 288 },
-// ];
-
-// const orbitIconsOuter = [
-//   { Icon: FaJava, color: "text-red-400", angle: 0 },
-//   { Icon: FaPython, color: "text-yellow-400", angle: 60 },
-//   { Icon: SiCplusplus, color: "text-blue-400", angle: 120 },
-//   { Icon: SiMongodb, color: "text-green-400", angle: 180 },
-// ];
-
 const Skills = () => {
   const [hoveredSkill, setHoveredSkill] = useState(null);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center px-8 py-20">
       <div className="relative w-full max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-28 items-stretch">
-        {/* =======================
-            LEFT – ORBIT SYSTEM
-        ======================= */}
-        {/* <div className="relative flex items-center justify-center"> */}
-
-        {/* CORE */}
-        {/* <m.div
-            animate={{
-              boxShadow: hoveredSkill
-                ? "0 0 120px rgba(56,189,248,1)"
-                : "0 0 80px rgba(56,189,248,0.9)",
-              scale: hoveredSkill ? 1.1 : 1,
-            }}
-            transition={{ duration: 0.4 }}
-            className="absolute h-28 w-28 rounded-full
-                       bg-gradient-to-r from-sky-400 to-indigo-400"
-          /> */}
-
-        {/* INNER RING */}
-        {/* <div className="absolute h-72 w-72 rounded-full border border-sky-400/10" /> */}
-
-        {/* OUTER RING */}
-        {/* <div className="absolute h-[420px] w-[420px] rounded-full border border-sky-400/5" /> */}
-
-        {/* INNER ORBIT */}
-        {/* <m.div
-            className="absolute h-72 w-72"
-            animate={{ rotate: 360 }}
-            transition={{
-              repeat: Infinity,
-              duration: hoveredSkill ? 40 : 18,
-              ease: "linear",
-            }}
-          >
-            {orbitIconsInner.map(({ Icon, color, angle }, i) => (
-              <div
-                key={i}
-                className="absolute top-1/2 left-1/2"
-                style={{
-                  transform: `rotate(${angle}deg) translateY(-144px) rotate(-${angle}deg)`,
-                }}
-              >
-                <m.div
-                  whileHover={{
-                    scale: 1.4,
-                    boxShadow: "0 0 45px rgba(56,189,248,1)",
-                  }}
-                  className="p-3 rounded-full bg-white/5 backdrop-blur
-                             shadow-[0_0_25px_rgba(56,189,248,0.8)]"
-                >
-                  <Icon className={`text-3xl ${color}`} />
-                </m.div>
-              </div>
-            ))}
-          </m.div> */}
-
-        {/* OUTER ORBIT */}
-        {/* <m.div
-            className="absolute h-[420px] w-[420px]"
-            animate={{ rotate: -360 }}
-            transition={{
-              repeat: Infinity,
-              duration: hoveredSkill ? 60 : 28,
-              ease: "linear",
-            }}
-          >
-            {orbitIconsOuter.map(({ Icon, color, angle }, i) => (
-              <div
-                key={i}
-                className="absolute top-1/2 left-1/2"
-                style={{
-                  transform: `rotate(${angle}deg) translateY(-210px) rotate(-${angle}deg)`,
-                }}
-              >
-                <m.div
-                  whileHover={{
-                    scale: 1.4,
-                    boxShadow: "0 0 45px rgba(56,189,248,1)",
-                  }}
-                  className="p-3 rounded-full bg-white/5 backdrop-blur
-                             shadow-[0_0_20px_rgba(56,189,248,0.6)]"
-                >
-                  <Icon className={`text-3xl ${color}`} />
-                </m.div>
-              </div>
-            ))}
-          </m.div>
-        </div> */}
+    
         <div className="flex items-center justify-center">
           <Skills3D />
         </div>
