@@ -16,6 +16,8 @@ body {
   background: radial-gradient(circle at top, #0f172a, #020617);
   color: #ffffff;
   overflow-x: hidden;
+  overflow-y: auto;
+
 }
 
 
@@ -108,3 +110,106 @@ body::after {
 .animate-arrow {
   animation: arrow 1.8s infinite ease-in-out;
 }
+/* ===============================
+   CUSTOM BLUE NEON CURSOR
+================================ */
+
+/* Hide default cursor */
+body {
+  cursor: none;
+}
+
+/* Outer ring */
+.cursor {
+  position: fixed;
+  width: 42px;
+  height: 42px;
+  border: 2px solid #4facfe;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: 
+    width 0.2s ease,
+    height 0.2s ease,
+    transform 0.08s ease-out;
+  box-shadow:
+    0 0 10px rgba(79, 172, 254, 0.6),
+    0 0 25px rgba(79, 172, 254, 0.4);
+  z-index: 9999;
+}
+
+/* Inner dot */
+.cursor-dot {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background: #4facfe;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 12px rgba(79, 172, 254, 0.9);
+  z-index: 10000;
+}
+
+/* Hover effect on clickable items */
+a:hover ~ .cursor,
+button:hover ~ .cursor {
+  width: 60px;
+  height: 60px;
+  border-color: #00f2fe;
+}
+
+/* Disable on mobile */
+@media (max-width: 768px) {
+  .cursor,
+  .cursor-dot {
+    display: none;
+  }
+
+  body {
+    cursor: auto;
+  }
+}
+
+/* ===============================
+   CUSTOM SCROLLBAR (BLUE THEME)
+   =============================== */
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b1220; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    #4facfe,
+    #00f2fe   
+  );
+  border-radius: 10px;
+  box-shadow:
+    0 0 8px rgba(79, 172, 254, 0.6),
+    0 0 15px rgba(0, 242, 254, 0.4);
+    
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    180deg,
+    #00f2fe,
+    #4facfe
+  );
+ 
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #4facfe #0b1220;
+}
+
+
