@@ -138,12 +138,6 @@ const ContactSection = () => {
                   key={index}
                   href={item.link}
                   animate={{ y: [0, -6, 0] }}
-                  // transition={{
-                  //   duration: 3,
-                  //   repeat: Infinity,
-                  //   ease: "easeInOut",
-                  //   delay: index * 0.3,
-                  // }}
                   target="_blank"
                   rel="noreferrer"
                   whileHover={{ scale: 1.15, rotate: 3 }}
