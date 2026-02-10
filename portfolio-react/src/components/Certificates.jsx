@@ -8,37 +8,37 @@ const certificatesData = [
     title: "Data Structures & Algorithms",
     issuer: "LPU",
     date: "2024",
-    link: "/certificates/jdsa by lpu.pdf",
+    link: "/certificates/dsa_by_lpu.pdf",
   },
   {
     title: "React Basics",
     issuer: "HackerRank",
     date: "2025",
-    link: "/certificates/react_basic certificate.pdf",
+    link: "/certificates/react_basic_certificate.pdf",
   },
   {
     title: "JavaScript Basics",
     issuer: "HackerRank",
     date: "2025",
-    link: "/certificates/javascript_basic certificate.pdf",
+    link: "/certificates/javascript_basic_certificate.pdf",
   },
   {
     title: "Cloud Computing",
     issuer: "NPTEL",
     date: "2025",
-    link: "/certificates/cloud computing.pdf",
+    link: "/certificates/cloud_computing.pdf",
   },
   {
     title: "Node JS Basics",
     issuer: "HackerRank",
     date: "2025",
-    link: "/certificates/nodejs_basic certificate.pdf",
+    link: "/certificates/nodejs_basic_certificate.pdf",
   },
   {
     title: "Problem Solving (C++)",
     issuer: "HackerRank",
     date: "2025",
-    link: "/certificates/problem_solving_basic certificate.pdf",
+    link: "/certificates/problem_solving_basic_certificate.pdf",
   },
 
   /* ===== EXTRA CERTIFICATES (VISIBLE AFTER CLICK) ===== */
@@ -46,19 +46,19 @@ const certificatesData = [
     title: "Python for Everybody",
     issuer: "HackerRank",
     date: "2025",
-    link: "/certificates/python_basic certificate.pdf",
+    link: "/certificates/python_basic_certificate.pdf",
   },
   {
     title: "SQL Basics",
     issuer: "HackerRank",
     date: "2025",
-    link: "/certificates/sql_basic certificate.pdf",
+    link: "/certificates/sql_basic_certificate.pdf",
   },
   {
     title: "JAVA Programming",
     issuer: "LPU",
     date: "2024",
-    link: "/certificates/java by lpu.pdf",
+    link: "/certificates/java_by_lpu.pdf",
   },
 ];
 
@@ -110,7 +110,7 @@ const Certificates = () => {
                 <a
                   href={cert.link}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className="text-slate-400 hover:text-sky-400 transition"
                 >
                   <FaExternalLinkAlt />
