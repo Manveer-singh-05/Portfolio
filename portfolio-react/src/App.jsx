@@ -27,17 +27,44 @@ function App() {
   }, []);
 
   // Custom Cursor Logic
+  // useEffect(() => {
+  //   const cursor = document.querySelector(".cursor");
+  //   const dot = document.querySelector(".cursor-dot");
+  //   const moveCursor = (e) => {
+  //     cursor.style.left = `${e.clientX}px`;
+  //     cursor.style.top = `${e.clientY}px`;
+  //     dot.style.left = `${e.clientX}px`;
+  //     dot.style.top = `${e.clientY}px`;
+  //   };
+  //   window.addEventListener("mousemove", moveCursor);
+  //   return () => window.removeEventListener("mousemove", moveCursor);
+  // }, []);
+  // Optimized Custom Cursor Logic
   useEffect(() => {
     const cursor = document.querySelector(".cursor");
     const dot = document.querySelector(".cursor-dot");
+    
+    let rafId;
+
     const moveCursor = (e) => {
-      cursor.style.left = `${e.clientX}px`;
-      cursor.style.top = `${e.clientY}px`;
-      dot.style.left = `${e.clientX}px`;
-      dot.style.top = `${e.clientY}px`;
+      // This syncs movement with your monitor's frame rate
+      rafId = requestAnimationFrame(() => {
+        const x = e.clientX;
+        const y = e.clientY;
+        
+        // This 'translate3d' tells the GPU to handle the movement
+        const transformStr = `translate3d(${x}px, ${y}px, 0) translate(-50%, -50%)`;
+        
+        if (cursor) cursor.style.transform = transformStr;
+        if (dot) dot.style.transform = transformStr;
+      });
     };
+
     window.addEventListener("mousemove", moveCursor);
-    return () => window.removeEventListener("mousemove", moveCursor);
+    return () => {
+      window.removeEventListener("mousemove", moveCursor);
+      cancelAnimationFrame(rafId);
+    };
   }, []);
 
   // Particles Configuration (Matched to your Blue Theme)
