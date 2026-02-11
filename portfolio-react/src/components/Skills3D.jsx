@@ -52,7 +52,7 @@ const Globe = () => {
 
   // --- MEDIUM SCALE SETTINGS ---
   const count = 20; 
-  const radius = 2.3; // Radius 2.5 is the sweet spot for "Medium"
+  const radius = 1.8; // Radius 2.5 is the sweet spot for "Medium"
   // ------------------------------
 
   const iconPositions = useMemo(() => {
@@ -92,9 +92,10 @@ const Globe = () => {
 
 const Skills3D = () => {
   return (
-    <div className="h-[500px] w-full flex items-center justify-center">
-      {/* FOV 40 and Camera Z 7 creates a well-framed medium view */}
-      <Canvas camera={{ position: [0, 0, 7], fov: 40 }}>
+    
+      
+      <Canvas  style={{ width: "100%", height: "100%" }}
+      camera={{ position: [0, 0, 7], fov: 40 }}>
         <ambientLight intensity={1.5} />
         <Globe />
         <OrbitControls 
@@ -103,7 +104,7 @@ const Skills3D = () => {
           rotateSpeed={0.5}
         />
       </Canvas>
-    </div>
+    
   );
 };
 
