@@ -30,7 +30,7 @@ const Skills = () => {
     <section className="relative min-h-screen flex items-center justify-center px-8 py-20 ">
       <div className="relative w-full max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-28 items-stretch ">
     
-        <div className="flex items-center justify-center  rounded-3xl p-6 h-full min-h-[550px] ">
+        <div className="flex items-center justify-center  h-full min-h-[550px] ">
           <Skills3D />
         </div>
 
