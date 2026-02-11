@@ -74,11 +74,19 @@ body::after {
 }
 
 .orbit-slow {
-  animation: orbit 28s linear infinite;
+  animation: orbitReverse 28s linear infinite;
 }
 
 .orbit-fast {
   animation: orbit 12s linear infinite;
+}
+@keyframes orbitReverse {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
 }
 @keyframes floatSlow {
   0% {

@@ -41,7 +41,7 @@ const ContactSection = () => {
         "service_2lekgi3",
         "template_dqi6tr1",
         formRef.current,
-        "YDR71vEmh6mTAcPN9",
+        "YDR71vEmh6mTAcPN9"
       )
       .then(
         () => {
@@ -51,12 +51,12 @@ const ContactSection = () => {
         (error) => {
           alert("Failed to send message ❌");
           console.error(error);
-        },
+        }
       );
   };
 
   return (
-    <section className="relative min-h-screen px-6 md:px-16 py-20 flex items-center justify-center">
+    <section className="relative px-6 md:px-16 py-20 flex items-center justify-center">
       <div className="w-full max-w-7xl">
         {/* HEADER */}
         <div className="text-center mb-20">
@@ -128,51 +128,59 @@ const ContactSection = () => {
             </form>
           </motion.div>
 
-          {/* ================= SOCIAL ORBS ================= */}
-          <div className="grid grid-cols-2 gap-10 place-items-center">
-            {socials.map((item, index) => {
-              const Icon = item.icon;
+          {/* ================= SOCIAL ORBIT ================= */}
+          <div className="relative flex items-center justify-center h-[400px]">
+            
+            {/* ROTATING CONTAINER */}
+            <div className="relative w-[400px] h-[400px] orbit">
+              
+              {socials.map((item, index) => {
+                const Icon = item.icon;
 
-              return (
-                <motion.a
-                  key={index}
-                  href={item.link}
-                  animate={{ y: [0, -6, 0] }}
-                  target="_blank"
-                  rel="noreferrer"
-                  whileHover={{ scale: 1.15, rotate: 3 }}
-                  transition={{ type: "spring", stiffness: 220, damping: 12 }}
-                  className="group relative aspect-square w-40 rounded-full
-                             bg-white/5 backdrop-blur
-                             border border-white/10
-                             hover:border-sky-400/50
-                             shadow-[0_0_30px_rgba(56,189,248,0.25)]
-                             hover:shadow-[0_0_90px_rgba(56,189,248,0.8)]
-                             flex items-center justify-center
-                             cursor-pointer"
-                >
-                  {/* INNER ORB */}
-                  <div
-                    className={`h-20 w-20 rounded-full flex items-center justify-center
-                                bg-gradient-to-r ${item.color}
-                                shadow-[0_0_35px_rgba(56,189,248,0.9)]
-                                group-hover:scale-125 transition`}
+                const positions = [
+                  "top-0 left-1/2 -translate-x-1/2",
+                  "top-1/2 right-0 -translate-y-1/2",
+                  "bottom-0 left-1/2 -translate-x-1/2",
+                  "top-1/2 left-0 -translate-y-1/2",
+                ];
+
+                return (
+                  <motion.a
+                    key={index}
+                    href={item.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    whileHover={{ scale: 1.15 }}
+                    className={`absolute ${positions[index]}
+                               group aspect-square w-36 rounded-full
+                               bg-white/5 backdrop-blur
+                               border border-white/10
+                               hover:border-sky-400/50
+                               shadow-[0_0_30px_rgba(56,189,248,0.25)]
+                               hover:shadow-[0_0_90px_rgba(56,189,248,0.8)]
+                               flex items-center justify-center
+                               cursor-pointer`}
                   >
-                    <Icon className="text-3xl text-slate-950" />
-                  </div>
-
-                  {/* LABEL */}
-                  <div className="absolute -bottom-7 text-center">
-                    <p
-                      className="text-sm font-medium text-slate-300
-                                  group-hover:text-sky-400 transition"
+                    {/* INNER ORB */}
+                    <div
+                      className={`h-20 w-20 rounded-full flex items-center justify-center
+                                  bg-gradient-to-r ${item.color}
+                                  shadow-[0_0_35px_rgba(56,189,248,0.9)]
+                                  group-hover:scale-125 transition`}
                     >
-                      {item.name}
-                    </p>
-                  </div>
-                </motion.a>
-              );
-            })}
+                      <Icon className="text-3xl text-slate-950" />
+                    </div>
+
+                    {/* LABEL */}
+                    {/* <div className="absolute -bottom-7 text-center">
+                      <p className="text-sm font-medium text-slate-300 group-hover:text-sky-400 transition">
+                        {item.name}
+                      </p>
+                    </div> */}
+                  </motion.a>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
