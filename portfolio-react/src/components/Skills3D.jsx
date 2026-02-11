@@ -52,7 +52,7 @@ const Globe = () => {
 
   // --- MEDIUM SCALE SETTINGS ---
   const count = 20; 
-  const radius = 1.8; // Radius 2.5 is the sweet spot for "Medium"
+  const radius = 1.75; // Radius 2.5 is the sweet spot for "Medium"
   // ------------------------------
 
   const iconPositions = useMemo(() => {
