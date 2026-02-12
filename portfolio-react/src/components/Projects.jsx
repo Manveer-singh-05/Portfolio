@@ -14,7 +14,7 @@ const projectsData = [
     tech: "MERN Stack • React • Node.js • Express • MongoDB",
     image: proappoint,
     liveLink: null,
-    githublink: "https://github.com/Manveer-singh-05/StudyFun-Hub"
+    githublink: "https://github.com/Manveer-singh-05/ointment-booking-system"
   },
    {
     title: "Basic Calendar Generator",
@@ -23,7 +23,7 @@ const projectsData = [
     tech: "C++",
     image: calendar,
     liveLink: null,
-    githublink: "https://github.com/Manveer-singh-05/StudyFun-Hub"
+    githublink: "https://github.com/Manveer-singh-05/calendar-event-generator"
   },
    
    {
