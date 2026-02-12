@@ -1,16 +1,17 @@
 import { motion } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import studyfunhub from "/projects/study-fun-hub.png";
+import proappoint from "/projects/proappoint.png";
 import { useState } from "react";
 
 const projectsData = [
   {
-    title: "Basic Calendar Generator",
+    title: "Proappoint - Appointment Management System",
     description:
-      "A C++ program that generates calendars for any given year using logical date calculations.",
-    tech: "C++",
-    image: studyfunhub,
-    liveLink: "http://studyfunhub.wuaze.com/",
+      "A mern stack web application for managing appointments, built with React, Node.js, Express, and MongoDB.",
+    tech: "MERN Stack • React • Node.js • Express • MongoDB",
+    image: proappoint,
+    liveLink: null,
     githublink: "https://github.com/Manveer-singh-05/StudyFun-Hub"
   },
    {
