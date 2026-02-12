@@ -77,17 +77,29 @@ const Sidebar = () => {
   // }, []);
 
   return (
+    // <nav
+    //   className="fixed left-6 top-1/2 z-50 hidden md:flex
+    //              flex-col items-center gap-6
+    //              rounded-[30px] bg-white/5 backdrop-blur-2xl
+    //              px-3 py-5
+    //              shadow-[0_0_60px_rgba(56,189,248,0.25)]"
+    //   style={{
+    //     transform: "translateY(-50%)",
+    //     animation: "floatSlow 4s ease-in-out infinite",
+    //   }}
+    // >
     <nav
-      className="fixed left-6 top-1/2 z-50 hidden md:flex
-                 flex-col items-center gap-6
-                 rounded-[30px] bg-white/5 backdrop-blur-2xl
-                 px-3 py-5
-                 shadow-[0_0_60px_rgba(56,189,248,0.25)]"
-      style={{
-        transform: "translateY(-50%)",
-        animation: "floatSlow 4s ease-in-out infinite",
-      }}
-    >
+  className="fixed left-6 top-1/2 z-50 hidden md:flex
+             flex-col items-center gap-6
+             rounded-[30px]
+             bg-transparent backdrop-blur-none  // ← FULLY TRANSPARENT
+             px-3 py-5
+             shadow-[0_0_60px_rgba(56,189,248,0.25)]"
+  style={{
+    transform: "translateY(-50%)",
+    animation: "floatSlow 4s ease-in-out infinite",
+  }}
+>
       <ul className="mt-4 flex flex-col gap-5">
         {sections.map(({ id, Icon }) => {
           const isActive = active === id;
