@@ -4,6 +4,7 @@ import studyfunhub from "/projects/study-fun-hub.png";
 import proappoint from "/projects/proappoint.png";
 import calendar from "/projects/calendar.png";
 import flightchatbot from "/projects/flightchatbot.png";
+import energyefficient from "/projects/energyefficient.png";
 import { useState } from "react";
 
 const projectsData = [
@@ -44,6 +45,15 @@ const projectsData = [
     image: studyfunhub,
     liveLink: "http://studyfunhub.wuaze.com/",
     githublink: "https://github.com/Manveer-singh-05/StudyFun-Hub"
+  },
+  {
+    title: "Energy efficient cpu scheduling algorithm",
+    description:
+      "A java , js, html ,css  program that implements an energy-efficient CPU scheduling algorithm.",
+    tech: "Java • JavaScript • HTML • CSS",
+    image: energyefficient,
+    liveLink: null,
+    githublink: "https://github.com/Manveer-singh-05/CPU-energy-efficient-scheduling-algorithm"
   },
   {
     title: "Portfolio Website",
