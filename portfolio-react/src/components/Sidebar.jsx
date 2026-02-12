@@ -24,26 +24,57 @@ const sections = [
 
 const Sidebar = () => {
   const [active, setActive] = useState("home");
-
   useEffect(() => {
-    const handleScroll = () => {
-      const middle = window.innerHeight / 2;
+  let ticking = false;
+  let rafId;
 
-      sections.forEach(({ id }) => {
-        const section = document.getElementById(id);
-        if (!section) return;
-
-        const rect = section.getBoundingClientRect();
-        if (rect.top <= middle && rect.bottom >= middle) {
-          setActive(id);
-        }
+  const handleScroll = () => {
+    if (!ticking) {
+      rafId = requestAnimationFrame(() => {
+        const middle = window.innerHeight / 2;
+        
+        sections.forEach(({ id }) => {
+          const section = document.getElementById(id);
+          if (!section) return;
+          
+          const rect = section.getBoundingClientRect();
+          if (rect.top <= middle && rect.bottom >= middle) {
+            setActive(id);
+          }
+        });
+        
+        ticking = false;
       });
-    };
+      ticking = true;
+    }
+  };
 
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  window.addEventListener("scroll", handleScroll, { passive: true });
+  
+  return () => {
+    window.removeEventListener("scroll", handleScroll);
+    cancelAnimationFrame(rafId);
+  };
+}, []);
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const middle = window.innerHeight / 2;
+
+  //     sections.forEach(({ id }) => {
+  //       const section = document.getElementById(id);
+  //       if (!section) return;
+
+  //       const rect = section.getBoundingClientRect();
+  //       if (rect.top <= middle && rect.bottom >= middle) {
+  //         setActive(id);
+  //       }
+  //     });
+  //   };
+
+  //   window.addEventListener("scroll", handleScroll);
+  //   handleScroll();
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
 
   return (
     <nav

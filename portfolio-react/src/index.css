@@ -11,6 +11,14 @@ html {
   box-sizing: inherit;
 }
 
+/* In index.css */
+.motion-div, 
+.motion-div *,
+[class*="motion"] {
+  transform: translateZ(0);  /* Forces GPU layer */
+  backface-visibility: hidden;
+  perspective: 1000;
+}
 body {
   min-height: 100vh;
   background: radial-gradient(circle at top, #0f172a, #020617);
