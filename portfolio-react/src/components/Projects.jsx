@@ -5,6 +5,7 @@ import proappoint from "/projects/proappoint.png";
 import calendar from "/projects/calendar.png";
 import flightchatbot from "/projects/flightchatbot.png";
 import energyefficient from "/projects/energyefficient.png";
+import portfolio from "/projects/portfolio.png";
 import { useState } from "react";
 
 const projectsData = [
@@ -60,7 +61,7 @@ const projectsData = [
     description:
       "A modern dark-glass portfolio to showcase skills and projects.",
     tech: "React • Tailwind • JavaScript",
-    image: studyfunhub,
+    image: portfolio,
     liveLink: null,
     githublink: "https://github.com/Manveer-singh-05/Portfolio"
   },
