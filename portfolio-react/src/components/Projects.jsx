@@ -116,7 +116,7 @@ const Projects = () => {
       </div>
 
       {/* Projects grid */}
-      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
         {visibleProjects.map((project, index) => (
           <motion.div
             key={index}
@@ -133,7 +133,7 @@ const Projects = () => {
                        transition-all duration-300"
           >
             {/* Project Image */}
-            <div className="relative h-48 overflow-hidden">
+            <div className="relative h-28 sm:h-32 md:h-36 lg:h-32 overflow-hidden">
               <img 
                 src={project.image} 
                 alt={project.title}
