@@ -133,7 +133,7 @@ const Projects = () => {
                        transition-all duration-300"
           >
             {/* Project Image */}
-            <div className="relative h-28 sm:h-32 md:h-36 lg:h-32 overflow-hidden">
+            <div className="relative h-48 overflow-hidden">
               <img 
                 src={project.image} 
                 alt={project.title}
@@ -180,7 +180,7 @@ const Projects = () => {
             </div>
 
             {/* Content */}
-            <div className="p-6">
+            <div className="p-5">
               <h3 className="text-xl font-semibold text-slate-100 mb-2 
                            group-hover:text-sky-400 transition-colors">
                 {project.title}
