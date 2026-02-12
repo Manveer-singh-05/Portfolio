@@ -92,7 +92,8 @@ const Sidebar = () => {
   className="fixed left-6 top-1/2 z-50 hidden md:flex
              flex-col items-center gap-6
              rounded-[30px]
-             bg-transparent backdrop-blur-none  // ← FULLY TRANSPARENT
+            //  bg-transparent backdrop-blur-none  // ← FULLY TRANSPARENT
+             bg-white/5 backdrop-blur-[1px]  // ← SEMI-TRANSPARENT WITH BLUR
              px-3 py-5
              shadow-[0_0_60px_rgba(56,189,248,0.25)]"
   style={{
