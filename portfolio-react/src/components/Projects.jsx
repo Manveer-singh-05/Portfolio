@@ -3,6 +3,7 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import studyfunhub from "/projects/study-fun-hub.png";
 import proappoint from "/projects/proappoint.png";
 import calendar from "/projects/calendar.png";
+import flightchatbot from "/projects/flightchatbot.png";
 import { useState } from "react";
 
 const projectsData = [
@@ -24,15 +25,17 @@ const projectsData = [
     liveLink: null,
     githublink: "https://github.com/Manveer-singh-05/StudyFun-Hub"
   },
+   
    {
-    title: "Basic Calendar Generator",
+    title: "Flight price tracker chatbot",
     description:
       "A C++ program that generates calendars for any given year using logical date calculations.",
-    tech: "C++",
-    image: studyfunhub,
-    liveLink: "http://studyfunhub.wuaze.com/",
-    githublink: "https://github.com/Manveer-singh-05/StudyFun-Hub"
+    tech: "Html • Css • Js • Api",
+    image: flightchatbot,
+    liveLink: null,
+    githublink: "https://github.com/Manveer-singh-05/Flight-Price-Tracker-chat-bot"
   },
+   
   {
     title: "Knowledge Sharing Platform",
     description:
