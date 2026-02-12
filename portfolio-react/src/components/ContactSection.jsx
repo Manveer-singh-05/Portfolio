@@ -36,13 +36,21 @@ const ContactSection = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
+    // emailjs
+    //   .sendForm(
+    //     "service_2lekgi3",
+    //     "template_dqi6tr1",
+    //     formRef.current,
+    //     "YDR71vEmh6mTAcPN9"
+    //   )
     emailjs
       .sendForm(
-        "service_2lekgi3",
-        "template_dqi6tr1",
+        import.meta.env.VITE_SERVICE_ID,
+        import.meta.env.VITE_TEMPLATE_ID,
         formRef.current,
-        "YDR71vEmh6mTAcPN9"
+        import.meta.env.VITE_PUBLIC_KEY,
       )
+
       .then(
         () => {
           alert("Message sent successfully 🚀");
@@ -51,7 +59,7 @@ const ContactSection = () => {
         (error) => {
           alert("Failed to send message ❌");
           console.error(error);
-        }
+        },
       );
   };
 
@@ -130,10 +138,8 @@ const ContactSection = () => {
 
           {/* ================= SOCIAL ORBIT ================= */}
           <div className="relative flex items-center justify-center h-[400px]">
-            
             {/* ROTATING CONTAINER */}
             <div className="relative w-[400px] h-[400px] orbit">
-              
               {socials.map((item, index) => {
                 const Icon = item.icon;
 
