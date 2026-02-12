@@ -46,8 +46,8 @@ const projectsData = [
       "A modern dark-glass portfolio to showcase skills and projects.",
     tech: "React • Tailwind • JavaScript",
     image: studyfunhub,
-    liveLink: "http://studyfunhub.wuaze.com/",
-    githublink: "https://github.com/Manveer-singh-05/StudyFun-Hub"
+    liveLink: null,
+    githublink: "https://github.com/Manveer-singh-05/Portfolio"
   },
 ];
 
