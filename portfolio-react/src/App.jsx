@@ -72,7 +72,7 @@ function App() {
     background: {
       color: { value: "transparent" }, // Let your CSS gradient show through
     },
-    fpsLimit: 120,
+    fpsLimit: 60  ,
     interactivity: {
       events: {
         onClick: { enable: true, mode: "push" },
