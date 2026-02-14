@@ -15,7 +15,7 @@ const projectsData = [
       "A mern stack web application for managing appointments, built with React, Node.js, Express, and MongoDB.",
     tech: "MERN Stack • React • Node.js • Express • MongoDB",
     image: proappoint,
-    liveLink: null,
+    liveLink: "https://proappoint.vercel.app/",
     githublink: "https://github.com/Manveer-singh-05/ointment-booking-system"
   },
    {
