@@ -30,8 +30,8 @@ const platforms = [
     accent: "from-blue-400 to-cyan-500",
     stats: [
       { label: "Rating", value: "0", icon: FaTrophy },
-      { label: "Rank", value: "", icon: FaCode },
-      { label: "Problems Solved", value: "6", icon: FaFire },
+      { label: "Rank", value: "Unrated", icon: FaCode },
+      { label: "Problems Solved", value: "27", icon: FaFire },
       { label: "Contests", value: "0", icon: FaTrophy },
     ],
     link: "https://codeforces.com/profile/manveersingh0501l",
@@ -42,8 +42,8 @@ const platforms = [
     accent: "from-gray-400 to-yellow-600",
     stats: [
       { label: "Rating", value: "", icon: FaTrophy },
-      { label: "Rank", value: "", icon: FaCode },
-      { label: "Problems Solved", value: "10", icon: FaFire },
+      { label: "Rank", value: "Bronze league", icon: FaCode },
+      { label: "Problems Solved", value: "97", icon: FaFire },
       { label: "Contests", value: "0", icon: FaTrophy },
     ],
     link: "https://www.codechef.com/users/manveer_05",
