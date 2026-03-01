@@ -31,8 +31,8 @@ const platforms = [
     stats: [
       { label: "Rating", value: "0", icon: FaTrophy },
       { label: "Rank", value: "Unrated", icon: FaCode },
-      { label: "Problems Solved", value: "27", icon: FaFire },
-      { label: "Contests", value: "0", icon: FaTrophy },
+      { label: "Problems Solved", value: "32", icon: FaFire },
+      { label: "Contests", value: "358", icon: FaTrophy },
     ],
     link: "https://codeforces.com/profile/manveersingh0501l",
   },
