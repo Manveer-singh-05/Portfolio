@@ -29,10 +29,10 @@ const platforms = [
     icon: SiCodeforces,
     accent: "from-blue-400 to-cyan-500",
     stats: [
-      { label: "Rating", value: "0", icon: FaTrophy },
+      { label: "Rating", value: "358", icon: FaTrophy },
       { label: "Rank", value: "Unrated", icon: FaCode },
       { label: "Problems Solved", value: "32", icon: FaFire },
-      { label: "Contests", value: "358", icon: FaTrophy },
+      { label: "Contests", value: "1", icon: FaTrophy },
     ],
     link: "https://codeforces.com/profile/manveersingh0501l",
   },
