@@ -6,6 +6,7 @@ import calendar from "/projects/calendar.png";
 import flightchatbot from "/projects/flightchatbot.png";
 import energyefficient from "/projects/energyefficient.png";
 import portfolio from "/projects/portfolio.png";
+import cgpacalculator from "/projects/cgpacalculator.png";
 import { useState } from "react";
 
 const projectsData = [
@@ -27,6 +28,17 @@ const projectsData = [
     liveLink: null,
     githublink: "https://github.com/Manveer-singh-05/calendar-event-generator"
   },
+   {
+    title: "CGPA Calculator",
+    description:
+      "A Js program that calculates cumulative grade point average for students.",
+    tech: "Html • CSS • JavaScript",
+    image: cgpacalculator,
+    liveLink: "https://manveer-singh-05.github.io/CGPA-Calculator/",
+    githublink: "https://github.com/Manveer-singh-05/CGPA-Calculator"
+  },
+
+
    
    {
     title: "Flight price tracker chatbot",
