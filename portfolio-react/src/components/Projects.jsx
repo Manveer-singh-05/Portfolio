@@ -7,6 +7,7 @@ import flightchatbot from "/projects/flightchatbot.png";
 import energyefficient from "/projects/energyefficient.png";
 import portfolio from "/projects/portfolio.png";
 import cgpacalculator from "/projects/cgpacalculator.png";
+import weatherapp from "/projects/weatherapp.png";
 import { useState } from "react";
 
 const projectsData = [
@@ -36,6 +37,15 @@ const projectsData = [
     image: cgpacalculator,
     liveLink: "https://manveer-singh-05.github.io/CGPA-Calculator/",
     githublink: "https://github.com/Manveer-singh-05/CGPA-Calculator"
+  },
+   {
+    title: "Weather App",
+    description:
+      "A JavaScript application that fetches and displays weather information using a public API.",
+    tech: "Html • CSS • JavaScript",
+    image: weatherapp,
+    liveLink: "https://manveer-singh-05.github.io/weather-app/",
+    githublink: "https://github.com/Manveer-singh-05/weather-app"
   },
 
 
