@@ -104,7 +104,7 @@ const Hero = () => {
           </a>
 
           <a
-            href="/manveer-cv-final.pdf"
+            href="/manveer-cv-finals.pdf"
             download
             className="rounded-full bg-white/5 px-10 py-3.5
                        text-sm font-medium text-sky-300
