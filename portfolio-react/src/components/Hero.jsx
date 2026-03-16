@@ -86,7 +86,9 @@ const Hero = () => {
           className="mx-auto max-w-2xl text-sm md:text-base
                       text-slate-300 leading-relaxed mb-14"
         >
-          Full-Stack Developer and Computer Science Engineering student at Lovely Professional University (LPU) focused on building clean, scalable, and responsive web applications. I enjoy turning ideas into real-world products by combining modern web technologies, problem-solving skills, and efficient system design.
+          I build clean, responsive web applications and enjoy solving
+          real-world problems using modern technologies.
+          
         </p>
 
         {/* BUTTONS */}
