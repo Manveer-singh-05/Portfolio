@@ -154,8 +154,14 @@ function App() {
         <MotionSection id="home" className=" w-full max-w-7xl mx-auto">
           <Hero />
         </MotionSection>
+        <MotionSection id="languages" className=" w-full max-w-7xl mx-auto">
+          <Languages />
+        </MotionSection>
         <MotionSection id="skills" className=" w-full max-w-7xl mx-auto">
           <Skills />
+        </MotionSection>
+        <MotionSection id="projects" className=" w-full max-w-6xl mx-auto">
+          <Projects />
         </MotionSection>
         <MotionSection id="competitive" className=" w-full max-w-7xl mx-auto">
           <CompetitiveProgramming />
@@ -163,14 +169,8 @@ function App() {
         <MotionSection id="certificates" className=" w-full max-w-7xl mx-auto">
           <Certificates />
         </MotionSection>
-        <MotionSection id="languages" className=" w-full max-w-7xl mx-auto">
-          <Languages />
-        </MotionSection>
         <MotionSection id="education" className=" w-full max-w-4xl mx-auto">
           <Education />
-        </MotionSection>
-        <MotionSection id="projects" className=" w-full max-w-6xl mx-auto">
-          <Projects />
         </MotionSection>
         <MotionSection id="contact" className=" w-full max-w-7xl mx-auto">
           <ContactSection />

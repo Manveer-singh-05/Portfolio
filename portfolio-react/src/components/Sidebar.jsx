@@ -13,12 +13,12 @@ import {
 
 const sections = [
   { id: "home", Icon: FaHome },
+  { id: "languages", Icon: FaGlobe },
   { id: "skills", Icon: FaCode },
+  { id: "projects", Icon: FaBriefcase },
   { id: "competitive", Icon: FaTrophy },
   { id: "certificates", Icon: FaCertificate },
-  { id: "languages", Icon: FaGlobe },
   { id: "education", Icon: FaGraduationCap },
-  { id: "projects", Icon: FaBriefcase },
   { id: "contact", Icon: FaEnvelope },
 ];
 
