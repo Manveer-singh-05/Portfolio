@@ -3,28 +3,61 @@ import { FaBriefcase } from "react-icons/fa";
 
 const trainingInternshipData = [
   {
-    title: "Internship Title",
-    company: "Company Name",
-    duration: "MM/YYYY - MM/YYYY",
-    description: "Add your internship description here",
+    title: "Cyber Security Intern",
+    company: "Interns Elite",
+    duration: "Jan 2024 – Feb 2024",
+    description:
+      "Worked on practical cybersecurity tasks involving network scanning, packet analysis, and reconnaissance using industry tools.",
     type: "Internship",
-    skills: ["Tech 1", "Tech 2", "Tech 3"],
+    highlights: [
+      "Performed network scanning using Nmap to identify hosts and services.",
+      "Captured and analyzed packets using Wireshark.",
+      "Used Windows Command Prompt for extracting system and server details.",
+      "Cloned websites using HTTrack for testing and analysis.",
+      "Conducted IP and network lookup for reconnaissance.",
+    ],
+    skills: [
+      "Nmap",
+      "Wireshark",
+      "HTTrack",
+      "Networking",
+      "Cyber Security Tools",
+    ],
   },
   {
-    title: "Training Program Title",
-    company: "Organization Name",
-    duration: "MM/YYYY - MM/YYYY",
-    description: "Add your training description here",
+    title: "DSA Training",
+    company: "Lovely Professional University (LPU)",
+    duration: "Jun 2025 – Jul 2025",
+    description:
+      "Completed training in Data Structures and Algorithms with a focus on problem-solving and implementation.",
     type: "Training",
-    skills: ["Skill 1", "Skill 2", "Skill 3"],
+    highlights: [
+      "Learned core concepts like arrays, recursion, sorting, and searching.",
+      "Improved problem-solving and logical thinking skills.",
+      "Built a project: Event Calendar Generator using C++.",
+    ],
+    skills: ["C++", "Data Structures", "Algorithms", "Problem Solving"],
   },
   {
-    title: "Training Program Title",
-    company: "Organization Name",
-    duration: "MM/YYYY - MM/YYYY",
-    description: "Add your training description here",
+    title: "Cyber Security Training",
+    company: "Interns Elite",
+    duration: "Jan 2024 – Feb 2024",
+    description:
+      "Completed structured training in cybersecurity concepts, attack techniques, and security tools.",
     type: "Training",
-    skills: ["Skill 1", "Skill 2", "Skill 3"],
+    highlights: [
+      "Studied types of hacking and their impact on organizations.",
+      "Learned concepts like Footprinting, Scanning, Reconnaissance, and Vulnerability.",
+      "Explored malware types, password attacks, and DoS/DDoS attacks.",
+      "Understood working of Proxy Servers, VPNs, and TOR network.",
+      "Worked with tools like Kali Linux and Metasploit framework.",
+    ],
+    skills: [
+      "Kali Linux",
+      "Metasploit",
+      "Cyber Security Fundamentals",
+      "Network Security",
+    ],
   },
 ];
 
@@ -165,6 +198,17 @@ const TrainingAndInternship = () => {
                 <p className="text-sm text-slate-400 mb-4 leading-relaxed">
                   {item.description}
                 </p>
+
+                {/* Highlights */}
+                {item.highlights && item.highlights.length > 0 && (
+                  <ul className="list-disc list-inside text-xs text-slate-400 mb-4 space-y-1">
+                    {item.highlights.map((highlight, idx) => (
+                      <li key={idx} className="text-slate-300">
+                        {highlight}
+                      </li>
+                    ))}
+                  </ul>
+                )}
 
                 {/* Skills/Tags */}
                 <div className="flex flex-wrap gap-2 pt-3 border-t border-slate-700/50">
