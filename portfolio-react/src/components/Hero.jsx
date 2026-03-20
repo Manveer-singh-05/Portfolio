@@ -38,7 +38,6 @@ const Hero = () => {
   }, [subIndex, index, deleting]);
 
   return (
-    
     <section className="relative min-h-screen flex items-center justify-center px-6 py-24 overflow-hidden">
       {/* HORIZONTAL HERO GLOW (KEY DIFFERENCE) */}
       <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
@@ -51,7 +50,7 @@ const Hero = () => {
       {/* CONTENT (NO CARD, NO BOX, NO MASK) */}
       <div className="relative z-10 text-center -translate-y-6 md:-translate-y-8">
         {/* AVATAR */}
-        <div className="relative mx-auto mb-12 h-[200px] w-[200px] rounded-full">
+        <div className="relative mx-auto mb-12 h-[240px] w-[240px] rounded-full">
           <div className="absolute inset-0 rounded-full  blur-[55px]" />
           <img
             src={profile}
@@ -88,7 +87,6 @@ const Hero = () => {
         >
           I build clean, responsive web applications and enjoy solving
           real-world problems using modern technologies.
-          
         </p>
 
         {/* BUTTONS */}
@@ -116,24 +114,18 @@ const Hero = () => {
           </a>
         </div>
       </div>
-        {/* SCROLL DOWN INDICATOR */}
-<a
-  href="#about"
-  className="absolute bottom-10 left-1/2 -translate-x-1/2
+      {/* SCROLL DOWN INDICATOR */}
+      <a
+        href="#about"
+        className="absolute bottom-10 left-1/2 -translate-x-1/2
              hidden md:flex flex-col items-center gap-2
              text-sky-400/80 hover:text-sky-400
              transition-all hover:drop-shadow-[0_0_12px_rgba(56,189,248,0.8)]"
->
-  <span className="text-xs tracking-widest uppercase">
-    Scroll Down
-  </span>
+      >
+        <span className="text-xs tracking-widest uppercase">Scroll Down</span>
 
-  <span className="text-xl animate-arrow">
-    ↓
-  </span>
-</a>
-
-
+        <span className="text-xl animate-arrow">↓</span>
+      </a>
     </section>
   );
 };
