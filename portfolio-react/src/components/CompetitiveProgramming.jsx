@@ -2,6 +2,8 @@ import {
   SiLeetcode,
   SiCodeforces,
   SiCodechef,
+  SiGeeksforgeeks,
+  SiHackerrank,
 } from "react-icons/si";
 
 import {
@@ -9,6 +11,10 @@ import {
   FaFire,
   FaCode,
   FaExternalLinkAlt,
+  FaStar,
+  FaMedal,
+  FaCertificate,
+  FaCheckCircle,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
 
@@ -49,12 +55,35 @@ const platforms = [
     ],
     link: "https://www.codechef.com/users/manveer_05",
   },
+  {
+    name: "GeeksforGeeks",
+    icon: SiGeeksforgeeks,
+    accent: "from-green-400 to-emerald-500",
+    stats: [
+      { label: "Streak", value: "50 Days", icon: FaFire },
+      { label: "Coding Score", value: "173", icon: FaStar },
+      { label: "Problem Solved", value: "82", icon: FaCheckCircle },
+      { label: "Institute Ranking", value: "7599", icon: FaMedal },
+    ],
+    link: "https://www.geeksforgeeks.org/profile/manveersingh",
+  },
+  {
+    name: "HackerRank",
+    icon: SiHackerrank,
+    accent: "from-green-500 to-lime-500",
+    stats: [
+      { label: "Stars", value: "5", icon: FaStar },
+      { label: "Rank", value: "Active", icon: FaMedal },
+      { label: "Badges", value: "4", icon: FaTrophy },
+      { label: "Certifications", value: "10", icon: FaCertificate },
+    ],
+    link: "https://www.hackerrank.com/profile/manveersingh0501",
+  },
 ];
 
 const CompetitiveProgramming = () => {
   return (
     <section className="relative min-h-screen px-6 md:px-16 py-20">
-
       {/* HEADER */}
       <div className="text-center mb-20">
         <h2 className="text-4xl md:text-5xl font-semibold mb-4">
@@ -72,7 +101,6 @@ const CompetitiveProgramming = () => {
 
       {/* PLATFORM CARDS */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
-
         {platforms.map((platform, index) => {
           const Icon = platform.icon;
 
@@ -80,7 +108,7 @@ const CompetitiveProgramming = () => {
             <motion.div
               key={index}
               whileHover={{ y: -8, scale: 1.03 }}
-transition={{ type: "spring", stiffness: 200 }}
+              transition={{ type: "spring", stiffness: 200 }}
               className="relative rounded-2xl p-6 bg-white/5 backdrop-blur
                          border border-white/10
                          hover:border-sky-400/40
@@ -88,28 +116,25 @@ transition={{ type: "spring", stiffness: 200 }}
                          hover:shadow-[0_0_60px_rgba(56,189,248,0.35)]
                          transition-colors duration-300"
             >
-
               {/* TOP BAR */}
               {/* <div
                 className={`absolute inset-x-0 top-0 h-1 rounded-t-2xl
                             bg-gradient-to-r ${platform.accent}`}
               /> */}
 
-{/* PROGRESS TOP BAR */}
-<div className="absolute inset-x-0 top-0 h-1 overflow-hidden rounded-t-2xl bg-white/10">
-  <motion.div
-    className={`h-full bg-gradient-to-r ${platform.accent}`}
-    initial={{ width: "0%" }}
-    animate={{ width: "100%" }}
-    transition={{
-      duration: 1.8,
-      ease: "easeInOut",
-      delay: index * 0.15,
-    }}
-  />
-</div>
-
-
+              {/* PROGRESS TOP BAR */}
+              <div className="absolute inset-x-0 top-0 h-1 overflow-hidden rounded-t-2xl bg-white/10">
+                <motion.div
+                  className={`h-full bg-gradient-to-r ${platform.accent}`}
+                  initial={{ width: "0%" }}
+                  animate={{ width: "100%" }}
+                  transition={{
+                    duration: 1.8,
+                    ease: "easeInOut",
+                    delay: index * 0.15,
+                  }}
+                />
+              </div>
 
               {/* HEADER */}
               <div className="flex items-center justify-between mb-6">
@@ -120,7 +145,8 @@ transition={{ type: "spring", stiffness: 200 }}
                   </h3>
                 </div>
 
-                <a title="profile"
+                <a
+                  title="profile"
                   href={platform.link}
                   target="_blank"
                   rel="noreferrer"
@@ -135,14 +161,9 @@ transition={{ type: "spring", stiffness: 200 }}
                 {platform.stats.map((stat, idx) => {
                   const StatIcon = stat.icon;
                   return (
-                    <div
-                      key={idx}
-                      className="flex items-center gap-3 text-sm"
-                    >
+                    <div key={idx} className="flex items-center gap-3 text-sm">
                       <StatIcon className="text-sky-400" />
-                      <span className="text-slate-400">
-                        {stat.label}:
-                      </span>
+                      <span className="text-slate-400">{stat.label}:</span>
                       <span className="text-slate-200 font-medium">
                         {stat.value}
                       </span>
@@ -150,7 +171,6 @@ transition={{ type: "spring", stiffness: 200 }}
                   );
                 })}
               </div>
-
             </motion.div>
           );
         })}
