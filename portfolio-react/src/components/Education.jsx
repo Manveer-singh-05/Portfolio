@@ -11,11 +11,11 @@ const educationData = [
     skills: ["C++", "Java", "Python", "DSA", "Web Development"],
   },
   {
-    degree: "High School Education",
-    institute: "Sri Guru Gobind Singh College, PanchKula",
-    year: "2020 – 2022",
+    degree: "Senior Secondary (Class XII)",
+    institute: "National Senior Secondary School, Jind",
+    year: "2021 – 2022",
     description:
-      "Completed high school education with focus on science and mathematics. A-grade studies that culminated in building fundamental subjects that helped me prepare for engineering studies.",
+      "Completed Class XII with a focus on Physics, Chemistry, and Mathematics, building a strong foundation for engineering studies.",
     skills: [
       "Physics",
       "Chemistry",
@@ -25,11 +25,11 @@ const educationData = [
     ],
   },
   {
-    degree: "School Education",
-    institute: "Shoolini Convent School, Solan",
-    year: "2001 – 2020",
+    degree: "Secondary (Class X)",
+    institute: "National Senior Secondary School, Jind",
+    year: "2019 – 2020",
     description:
-      "Completed school education with a focus on science and mathematics. Participated in curriculum education that helped improve problem-solving and thinking skills through various projects and competitions.",
+      "Completed Class X with strong academic performance and developed problem-solving and communication skills through academics and activities.",
     skills: [
       "Problem Solving",
       "Research",
