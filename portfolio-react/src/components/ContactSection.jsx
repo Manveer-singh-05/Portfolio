@@ -36,13 +36,6 @@ const ContactSection = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    // emailjs
-    //   .sendForm(
-    //     "service_2lekgi3",
-    //     "template_dqi6tr1",
-    //     formRef.current,
-    //     "YDR71vEmh6mTAcPN9"
-    //   )
     emailjs
       .sendForm(
         import.meta.env.VITE_SERVICE_ID,
