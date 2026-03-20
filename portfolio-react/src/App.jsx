@@ -6,6 +6,7 @@ import { loadSlim } from "@tsparticles/slim";
 import Sidebar from "./components/Sidebar";
 import Hero from "./components/Hero";
 import Skills from "./components/Skills";
+import TrainingAndInternship from "./components/TrainingAndInternship";
 import Projects from "./components/Projects";
 import Languages from "./components/Languages";
 import Education from "./components/Education";
@@ -159,6 +160,9 @@ function App() {
         </MotionSection>
         <MotionSection id="skills" className=" w-full max-w-7xl mx-auto">
           <Skills />
+        </MotionSection>
+        <MotionSection id="training" className=" w-full max-w-7xl mx-auto">
+          <TrainingAndInternship />
         </MotionSection>
         <MotionSection id="projects" className=" w-full max-w-6xl mx-auto">
           <Projects />
