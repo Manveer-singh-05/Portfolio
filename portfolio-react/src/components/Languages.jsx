@@ -148,49 +148,6 @@
 import { motion } from "framer-motion";
 import { FaReact, FaServer, FaLightbulb, FaMobileAlt } from "react-icons/fa";
 
-const languages = [
-  {
-    flag: "🇺🇸",
-    name: "English",
-    level: "Fluent",
-    percent: 90,
-  },
-  {
-    flag: "🇮🇳",
-    name: "Hindi",
-    level: "Native",
-    percent: 95,
-  },
-  {
-    flag: "🇮🇳",
-    name: "Punjabi",
-    level: "Conversational",
-    percent: 80,
-  },
-];
-
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.15,
-    },
-  },
-};
-
-const rowVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      type: "spring",
-      stiffness: 120,
-      damping: 18,
-    },
-  },
-};
 
 const AboutLanguages = () => {
   return (
