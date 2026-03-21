@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FaBriefcase } from "react-icons/fa";
+import { FaBriefcase, FaExternalLinkAlt } from "react-icons/fa";
 
 const trainingInternshipData = [
   {
@@ -9,6 +9,7 @@ const trainingInternshipData = [
     description:
       "Worked on practical cybersecurity tasks involving network scanning, packet analysis, and reconnaissance using industry tools.",
     type: "Internship",
+    certificateLink: "/certificates/Manveer_singh_CS_InternsElite.pdf",
     highlights: [
       "Performed network scanning using Nmap to identify hosts and services.",
       "Captured and analyzed packets using Wireshark.",
@@ -31,6 +32,7 @@ const trainingInternshipData = [
     description:
       "Completed training in Data Structures and Algorithms with a focus on problem-solving and implementation.",
     type: "Training",
+    certificateLink: "/certificates/manveer_summer_training.pdf",
     highlights: [
       "Learned core concepts like arrays, recursion, sorting, and searching.",
       "Improved problem-solving and logical thinking skills.",
@@ -45,6 +47,7 @@ const trainingInternshipData = [
     description:
       "Completed structured training in cybersecurity concepts, attack techniques, and security tools.",
     type: "Training",
+    certificateLink: "/certificates/Manveer_singh_CS_InternsElite_training.pdf",
     highlights: [
       "Studied types of hacking and their impact on organizations.",
       "Learned concepts like Footprinting, Scanning, Reconnaissance, and Vulnerability.",
@@ -186,9 +189,22 @@ const TrainingAndInternship = () => {
                     </h3>
                     <p className="text-sm text-slate-300">{item.company}</p>
                   </div>
-                  <span className="inline-block text-xs font-medium text-sky-400 bg-sky-400/10 px-3 py-1 rounded-full mt-2 md:mt-0 whitespace-nowrap">
-                    {item.type}
-                  </span>
+                  <div className="flex items-center gap-2 mt-2 md:mt-0">
+                    <span className="inline-block text-xs font-medium text-sky-400 bg-sky-400/10 px-3 py-1 rounded-full whitespace-nowrap">
+                      {item.type}
+                    </span>
+                    {item.certificateLink && (
+                      <a
+                        href={item.certificateLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-slate-400 hover:text-sky-400 transition-colors ml-2"
+                        title="View Certificate"
+                      >
+                        <FaExternalLinkAlt className="w-4 h-4" />
+                      </a>
+                    )}
+                  </div>
                 </div>
 
                 {/* Duration */}
