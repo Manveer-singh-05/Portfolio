@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import profile from "../assets/manveer1.png";
+import profile from "../assets/manveer2.jpeg";
 
 const roles = [
   "Software Engineering Student ",
