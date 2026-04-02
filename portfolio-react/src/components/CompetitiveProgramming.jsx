@@ -48,10 +48,10 @@ const platforms = [
     icon: SiCodechef,
     accent: "from-gray-400 to-yellow-600",
     stats: [
-      { label: "Rating", value: "", icon: FaTrophy },
+      { label: "Rating", value: "966", icon: FaTrophy },
       { label: "Rank", value: "Bronze league", icon: FaCode },
       { label: "Problems Solved", value: "97", icon: FaFire },
-      { label: "Contests", value: "0", icon: FaTrophy },
+      { label: "Contests", value: "1", icon: FaTrophy },
     ],
     link: "https://www.codechef.com/users/manveer_05",
   },
